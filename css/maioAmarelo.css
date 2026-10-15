@@ -1,0 +1,152 @@
+body{
+    width:100%;
+    min-height:100%;
+
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:white;
+    /* overflow-x:hidden;
+    overflow-y:hidden; */
+}
+
+.maioAmarelo{
+    width:100%;
+    min-height:100vh;
+    margin:0;
+    background:white;
+}
+
+.bannerCampanha{
+    width:100%;
+    height:360px;
+    background-image:url("../assets/imagens/BannerMaioAmarelo.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.descricaoCampanha{
+    width:94%;
+    margin:0 auto;
+    padding:18px 0;
+}
+
+.descricaoCampanha p{
+    font-size:18px;
+    line-height:1.4;
+    text-align:justify;
+}
+
+.cardsCampanha{
+    width:94%;
+    margin:0 auto;
+    display:flex;
+    gap:14px;
+    padding:10px 0 25px;
+}
+
+.cardCampanha{
+    position:relative;
+    flex:1;
+    min-height:300px;
+    padding:24px;
+    background:#4a4a4a;
+    color:white;
+    border-radius:6px;
+}
+
+.cardCampanha h3{
+    color:#ffff00;
+    font-size:19px;
+    margin-bottom:12px;
+}
+
+.cardCampanha p{
+    font-size:17px;
+    line-height:1.4;
+}
+
+.cardObjetivo{
+    padding-bottom:75px;
+}
+
+.proximo{
+    position:absolute;
+    right:16px;
+    bottom:16px;
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:4px solid black;
+    border-radius:50%;
+    background:#777;
+    color:black;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .bannerCampanha{
+        height:300px;
+    }
+
+    .cardsCampanha{
+        flex-wrap:wrap;
+    }
+
+    .cardCampanha{
+        flex:1 1 45%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .bannerCampanha{
+        height:220px;
+    }
+
+    .descricaoCampanha{
+        width:92%;
+
+        padding:15px 0;
+    }
+
+    .descricaoCampanha p{
+        font-size:16px;
+    }
+
+    .cardsCampanha{
+        width:92%;
+
+        flex-direction:column;
+
+        padding-bottom:20px;
+    }
+
+    .cardCampanha{
+        min-height:auto;
+
+        padding:20px;
+    }
+
+    .cardCampanha p{
+        font-size:16px;
+    }
+
+}

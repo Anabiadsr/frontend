@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/especialistas.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SPI - Vídeos Informativos</title>
+</head>
+
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <main class="paginaEspecialistas">
+
+        <section class="cabecalhoEspecialistas">
+            <h1>Vídeos Informativos</h1>
+
+            <a href="index.html">
+                <button class="proximaPagina">
+                    &#10095;
+                </button>
+            </a>
+        </section>
+
+    
+        <div class="videoPrincipal">
+            <video id="videoPrincipal" controls preload="metadata" class="w-full rounded-2xl shadow-lg bg-slate-900">
+                <source src="assets/videos/final-libras_fisio.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <section class="blocoVideosSecundarios max-w-6xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div onclick="trocarVideo('assets/videos/final-libras_fisio.mp4')" 
+                     class="cursor-pointer bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex gap-3.5 items-center group">
+                    <div class="relative shrink-0 w-28 h-20 bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center">
+                        <video src="assets/videos/final-libras_fisio.mp4" preload="metadata" class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition"></video>
+                        <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded font-mono z-10">03:04</span>
+                    </div>
+                    <div>
+                        <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Acessibilidade e Fisioterapia no Trânsito.</h3>
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Inclusão</span>
+                        <p class="text-xs text-slate-500 font-medium">Convidada SPI- Fioterapeuta Laís Fernanda <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
+                    </div>
+                </div>
+
+                <div onclick="trocarVideo('assets/videos/video_03.mp4')" 
+                     class="cursor-pointer bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex gap-3.5 items-center group">
+                    <div class="relative shrink-0 w-28 h-20 bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center">
+                        <video src="assets/videos/video_03.mp4" preload="metadata" class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition"></video>
+                        <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded font-mono z-10">00:00</span>
+                    </div>
+                    <div>
+                        <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Você já viu um semáforo sonoro?</h3>
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Saiba mais!</span>
+                        <p class="text-xs text-slate-500 font-medium">SPI <br></p>
+                    </div>
+                </div>
+
+                <div onclick="trocarVideo('assets/videos/Video_libras_final_spi.mp4')" 
+                     class="cursor-pointer bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex gap-3.5 items-center group">
+                    <div class="relative shrink-0 w-28 h-20 bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center">
+                        <video src="assets/videos/Video_libras_final_spi.mp4" preload="metadata" class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition"></video>
+                        <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded font-mono z-10">00:00</span>
+                    </div>
+                    <div>
+                        <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Como o tempo do semáforo pode ser um problema na travessia?</h3>
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Inclusão</span>
+                                               <p class="text-xs text-slate-500 font-medium">Especialista SPI- Ana Beatriz e Maria José <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
+                    </div>
+                </div>
+
+                <div onclick="trocarVideo('assets/videos/video_02.mp4')" 
+                     class="cursor-pointer bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex gap-3.5 items-center group">
+                    <div class="relative shrink-0 w-28 h-20 bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center">
+                        <video src="assets/videos/video_02.mp4" preload="metadata" class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition"></video>
+                        <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded font-mono z-10">00:00</span>
+                    </div>
+                    <div>
+                        <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Saiba como funciona!</h3>
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Categoria</span>
+                        <p class="text-xs text-slate-500 font-medium">SPI <br></p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function trocarVideo(caminhoVideo) {
+            const video = document.getElementById('videoPrincipal');
+            
+            video.src = caminhoVideo;
+            video.load();
+            video.play();
+            video.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+
+</html>
