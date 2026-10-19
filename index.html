@@ -135,11 +135,6 @@
                 <span class="text-xs text-white">→</span>
             </a>
             
-            <a href="index.html" class="flex items-center justify-between px-4 py-3 rounded-xl bg-[#212952] text-white hover:bg-white hover:text-spi-dark border border-transparent hover:border-blue-100 hover:shadow-sm transition text-sm">
-                <span class="text-white">Parceiros</span>
-                <span class="text-xs text-white">→</span>
-            </a>
-            
             <a href="campanhaMaioAmarelo.html" class="flex items-center justify-between px-4 py-3 rounded-xl bg-[#212952] text-white hover:bg-white hover:text-spi-dark border border-transparent hover:border-blue-100 hover:shadow-sm transition text-sm">
                 <span class="text-white">Campanhas</span>
                 <span class="text-xs text-white">→</span>
@@ -169,7 +164,7 @@
     <header class="bg-spi-dark text-white p-4 flex items-center justify-between shadow-md relative z-20">
         <div class="flex items-center gap-4">
             <button onclick="abrirMenu()" class="text-3xl font-bold cursor-pointer hover:text-gray-300 transition">≡</button>
-            <a href="contato.html" class="flex items-center gap-2 hover:opacity-80 transition">
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
                 <img src="assets/logos/logo_afj.png" alt="Logo SPI" class="h-12 object-contain">
             </a>
         </div>
@@ -187,9 +182,9 @@
             </p>
 
             <div>
-                <a href="produto.html" class="bg-spi-blue text-white font-inter font-semibold py-3.5 px-8 rounded-full hover:bg-blue-900 transition shadow-lg cursor-pointer">
-                    Descobrir tecnologia
-                </a>
+            <a href="produto.html" class="bg-white text-slate-900 font-inter font-semibold py-3.5 px-8 rounded-full shadow-xl shadow-black/20 hover:bg-slate-50 hover:shadow-2xl hover:shadow-black/25 transition cursor-pointer">
+                  Descobrir tecnologia
+                  </a>
             </div>
 
             <div class="grid grid-cols-3 gap-4 mt-4 pt-6 border-t border-gray-200/80 max-w-md">
@@ -362,7 +357,7 @@
             </article>
 
             <article class="cardCategoria">
-                <a href="blog.html">
+                <a href="noticias.html">
                  
                     <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -370,7 +365,7 @@
                         </svg>
                     </div>
 
-                    <h2>Blog</h2>
+                    <h2>Notícias</h2>
                     <p>
                         Fique por dentro das principais discussões, pareceres e novidades do setor.
                     </p>
@@ -433,156 +428,254 @@
         cheguem a diferentes comunidades do Vale do Ribeira."
     </p>
     </section>
+
     
-    <main class="paginaContato">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/contato.css">
+    <div class="max-w-6xl mx-auto px-6 py-12">
 
-        <section class="areaContato">
-
-            <div class="colunaLinks">
-
-                <div class="grupoLinks">
-                    <h2>Mobilidade e tecnologia</h2>
-
-                    <a href="mobilidadeTecnologia.html">Mobilidade Urbana</a>
-                    <a href="conscientizacao.html">Segurança</a>
-                    <a href="produto.html">Sinalização</a>
-                </div>
-
-
-                <div class="grupoLinks">
-                    <h2>Baixe o App</h2>
-
-                    <a href="#">Android</a>
-                    <a href="#">Apple iOS</a>
-                </div>
-
+        <div class="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 md:p-10 mb-14 shadow-xs">
+            <div class="max-w-2xl mb-8">
+                <span class="text-xs font-bold text-red-500 uppercase tracking-widest block mb-1">Central de Atendimento & Ouvidoria</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Fale com a Equipe SPI</h2>
+                <p class="text-slate-600 text-sm mt-2">Envie dúvidas, sugestões de melhoria ou reporte problemas em semáforos com sinalização sonora e acessibilidade.</p>
             </div>
 
-            <div class="colunaLinks">
-
-                <div class="grupoLinks">
-                    <h2>Conscientização</h2>
-
-                    <a href="conscientizacao.html">Comportamento</a>
-                    <a href="cfcs.html">Educação nas Escolas</a>
-                    <a href="campanhaMaioAmarelo.html">Maio Amarelo</a>
-                    <a href="conscientizacao.html">Programa Nós do Trânsito</a>
-                    <a href="conscientizacao.html">Semana Nacional de Trânsito</a>
-                    <a href="faqParceiros.html">Tira Dúvidas</a>
+            <form id="formContato" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Seu Nome</label>
+                    <input 
+                        type="text" 
+                        id="contatoNome" 
+                        required 
+                        placeholder="Ex.: Maria Eduarda" 
+                        class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-900 transition"
+                    >
                 </div>
 
-                <div class="grupoLinks">
-                    <h2>Atendimento ao cliente</h2>
-
-                    <a href="mailto:SPIPassInteligence@gmail.com">Central de Relacionamento</a>
-                    <a href="faqParceiros.html">Perguntas frequentes Faq</a>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Seu E-mail</label>
+                    <input 
+                        type="email" 
+                        id="contatoEmail" 
+                        required 
+                        placeholder="Ex.: seuemail@exemplo.com" 
+                        class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-900 transition"
+                    >
                 </div>
 
+                <div class="md:col-span-2">
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Assunto</label>
+                    <select 
+                        id="contatoAssunto" 
+                        required 
+                        class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-900 transition text-slate-700"
+                    >
+                        <option value="" disabled selected>Selecione o motivo do contato...</option>
+                        <option value="Dúvida sobre o Projeto">Dúvida sobre o Projeto</option>
+                        <option value="Reportar Semáforo com Defeito">Reportar Semáforo com Defeito</option>
+                        <option value="Sugestão de Acessibilidade">Sugestão de Acessibilidade</option>
+                        <option value="Parceria / Contato Institucional">Parceria / Contato Institucional</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-1.5">Mensagem</label>
+                    <textarea 
+                        id="contatoMensagem" 
+                        rows="4" 
+                        required 
+                        placeholder="Descreva aqui sua mensagem detalhadamente..." 
+                        class="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-900 transition resize-y"
+                    ></textarea>
+                </div>
+
+                <div id="statusContato" class="md:col-span-2 hidden text-sm font-semibold p-3.5 rounded-xl text-center"></div>
+
+                <div class="md:col-span-2 flex justify-end">
+                    <button 
+                        type="submit" 
+                        id="btnEnviarContato" 
+                        class="bg-[#171e3d] hover:bg-red-600 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-xl shadow-md transition duration-200 cursor-pointer"
+                    >
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Mobilidade e Tecnologia</h2>
+                    <nav class="flex flex-col gap-2.5">
+                        <a href="mobilidadeTecnologia.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Mobilidade Urbana</a>
+                        <a href="conscientizacao.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Segurança</a>
+                        <a href="produto.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Sinalização</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Baixe o App</h2>
+                    <nav class="flex flex-col gap-2.5">
+                        <a href="#" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Android</a>
+                        <a href="#" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Apple iOS</a>
+                    </nav>
+                </div>
             </div>
 
-            <div class="colunaContato">
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Conscientização</h2>
+                    <nav class="flex flex-col gap-2.5">
+                        <a href="conscientizacao.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Comportamento</a>
+                        <a href="cfcs.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Educação nas Escolas</a>
+                        <a href="campanhaMaioAmarelo.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Maio Amarelo</a>
+                        <a href="conscientizacao.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Programa Nós do Trânsito</a>
+                        <a href="conscientizacao.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Semana Nacional de Trânsito</a>
+                        <a href="faqParceiros.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Tira Dúvidas</a>
+                    </nav>
+                </div>
 
-             <h2 style="color: #000;">Contato</h2>
-                <div class="itemContato flex items-center gap-3 mb-3">
-                    <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shrink-0">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
+                <div>
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Atendimento ao Cliente</h2>
+                    <nav class="flex flex-col gap-2.5">
+                        <a href="mailto:SPIPassInteligence@gmail.com" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Central de Relacionamento</a>
+                        <a href="faqParceiros.html" class="text-sm font-semibold text-[#171e3d] hover:text-amber-500 transition-colors">Perguntas Frequentes (FAQ)</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <h2 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Contato</h2>
+                
+                <div class="flex flex-col gap-5 mt-2">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 shadow-md">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-bold text-slate-900">Redação:<br> <span class="font-normal text-slate-600">(13) 99133-1315</span></span>
                     </div>
 
-                    <strong>
-                        Redação: (13) 991331315
-                    </strong>
-                </div>
-                <div class="itemContato flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center shrink-0">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 shadow-md">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-bold text-slate-900">E-mail:<br> <a href="mailto:SPIPassInteligence@gmail.com" class="font-normal text-slate-600 hover:text-amber-500 transition">SPIPassInteligence@gmail.com</a></span>
                     </div>
+                </div>
+            </div>
 
-                    <strong>
-                        SPIPassInteligence@gmail.com
-                    </strong>
+            <div class="flex flex-col items-center lg:items-end justify-between">
+                
+                <div class="flex lg:flex-col gap-3">
+                    <a href="#" aria-label="Instagram" class="w-10 h-10 flex items-center justify-center bg-slate-900 text-white hover:bg-amber-500 hover:text-slate-900 rounded-full transition-all duration-300 shadow-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="w-10 h-10 flex items-center justify-center bg-slate-900 text-white hover:bg-amber-500 hover:text-slate-900 rounded-full transition-all duration-300 shadow-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V1H14.3c-4.3 0-5.3 3.2-5.3 5.3v3.1H6v4.2h3V23h5.5v-9.4h3.7z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)" class="w-10 h-10 flex items-center justify-center bg-slate-900 text-white hover:bg-amber-500 hover:text-slate-900 rounded-full transition-all duration-300 shadow-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="w-10 h-10 flex items-center justify-center bg-slate-900 text-white hover:bg-amber-500 hover:text-slate-900 rounded-full transition-all duration-300 shadow-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.553a3.003 3.003 0 00-2.11 2.11C0 8.036 0 12 0 12s0 3.964.502 5.837a3.003 3.003 0 002.11 2.11c1.872.553 9.388.553 9.388.553s7.516 0 9.388-.553a3.003 3.003 0 002.11-2.11C24 15.964 24 12 24 12s0-3.964-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                    </a>
                 </div>
 
-            </div>
-
-            <div class="redesSociais flex flex-col gap-3 items-center">
-
-                <a href="#" aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-black text-white hover:bg-neutral-800 rounded-full transition-all duration-300">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-
-                <a href="#" aria-label="Facebook" class="w-8 h-8 flex items-center justify-center bg-black text-white hover:bg-neutral-800 rounded-full transition-all duration-300">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V1H14.3c-4.3 0-5.3 3.2-5.3 5.3v3.1H6v4.2h3V23h5.5v-9.4h3.7z"></path>
-                    </svg>
-                </a>
-
-                <a href="#" aria-label="X" class="w-8 h-8 flex items-center justify-center bg-black text-white hover:bg-neutral-800 rounded-full transition-all duration-300">
-                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                    </svg>
-                </a>
-
-                <a href="#" aria-label="YouTube" class="w-8 h-8 flex items-center justify-center bg-black text-white hover:bg-neutral-800 rounded-full transition-all duration-300">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.516 3.5 12 3.5 12 3.5s-7.516 0-9.388.553a3.003 3.003 0 00-2.11 2.11C0 8.036 0 12 0 12s0 3.964.502 5.837a3.003 3.003 0 002.11 2.11c1.872.553 9.388.553 9.388.553s7.516 0 9.388-.553a3.003 3.003 0 002.11-2.11C24 15.964 24 12 24 12s0-3.964-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-                    </svg>
+                <a href="index.html" title="Página inicial" class="mt-8 w-12 h-12 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:border-slate-900 hover:text-white transition shadow-sm">
+                    <span class="text-lg font-bold leading-none">&#10095;</span>
                 </a>
 
             </div>
+        </div>
 
-            <div class="espacoTresBr"></div>
+    </div>
+</section>
 
-            <a href="index.html">
-                <button class="proximaPagina">
-                    &#10095;
-                </button>
-            </a>
+</main>
 
-        </section>
+<footer class="relative w-full flex flex-col items-center justify-center px-6 py-20 text-center" style="background: linear-gradient(135deg, #212952 0%, #171e3d 100%); width: 100vw !important; margin-left: calc(-50vw + 50%); border: none; margin-bottom: 0;">
+    
+    <p class="text-amber-400 text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-6 max-w-3xl leading-relaxed z-10">
+        O semáforo inteligente não conta apenas segundos.<br class="hidden md:block">
+        Ele reconhece a necessidade, estende o tempo e garante que ninguém fique atrás.
+    </p>
 
-        <div class="faixaAzul"></div>
+    <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-2 z-10" style="text-shadow: 0px 4px 10px rgba(0,0,0,0.4);">
+        O FUTURO DA MOBILIDADE URBANA
+    </h1>
 
-        <section class="chamadaFinal">
+    <h2 class="text-blue-400 text-2xl md:text-4xl font-extrabold tracking-tight mt-2 z-10">
+        COMEÇA AQUI!
+    </h2>
 
-            <p>
-                O SEMÁFORO INTELIGENTE NÃO CONTA APENAS SEGUNDOS.
-                ELE RECONHECE A NECESSIDADE, ESTENDE O TEMPO E GARANTE
-                QUE NINGUÉM FIQUE ATRÁS
-            </p>
+</footer>
 
-            <h1>
-                O FUTURO DA MOBILIDADE URBANA
-            </h1>
+<script>
+    const formContato = document.getElementById('formContato');
+    const contatoNome = document.getElementById('contatoNome');
+    const contatoEmail = document.getElementById('contatoEmail');
+    const contatoAssunto = document.getElementById('contatoAssunto');
+    const contatoMensagem = document.getElementById('contatoMensagem');
+    const btnEnviarContato = document.getElementById('btnEnviarContato');
+    const statusContato = document.getElementById('statusContato');
 
-            <h2>
-                COMEÇA AQUI!
-            </h2>
+    formContato.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-        </section>
-  </main>
-  
+        btnEnviarContato.innerText = 'Enviando...';
+        btnEnviarContato.disabled = true;
+        statusContato.classList.add('hidden');
 
-    <script>
-        function abrirMenu() {
-            document.getElementById('menuLateral').style.left = '0';
-            document.getElementById('fundoMenu').classList.remove('hidden');
+        const dados = new FormData();
+        dados.append('nome', contatoNome.value.trim());
+        dados.append('email', contatoEmail.value.trim());
+        dados.append('assunto', contatoAssunto.value);
+        dados.append('mensagem', contatoMensagem.value.trim());
+
+        try {
+            const resposta = await fetch('salvar_contato.php', {
+                method: 'POST',
+                body: dados
+            });
+
+            const resultado = await resposta.json();
+
+            statusContato.classList.remove('hidden');
+            if (resultado.sucesso) {
+                statusContato.className = 'md:col-span-2 text-sm font-semibold p-3.5 rounded-xl text-center bg-emerald-50 text-emerald-800 border border-emerald-200';
+                statusContato.innerText = resultado.mensagem;
+                formContato.reset();
+            } else {
+                statusContato.className = 'md:col-span-2 text-sm font-semibold p-3.5 rounded-xl text-center bg-rose-50 text-rose-800 border border-rose-200';
+                statusContato.innerText = resultado.mensagem;
+            }
+        } catch (erro) {
+            statusContato.classList.remove('hidden');
+            statusContato.className = 'md:col-span-2 text-sm font-semibold p-3.5 rounded-xl text-center bg-rose-50 text-rose-800 border border-rose-200';
+            statusContato.innerText = 'Falha ao conectar com o servidor.';
+        } finally {
+            btnEnviarContato.innerText = 'Enviar Mensagem';
+            btnEnviarContato.disabled = false;
         }
+    });
+</script>
 
-        function fecharMenu() {
-            document.getElementById('menuLateral').style.left = '-300px';
-            document.getElementById('fundoMenu').classList.add('hidden');
-        }
-    </script>
+<script>
+    function abrirMenu() {
+        document.getElementById('menuLateral').style.left = '0';
+        document.getElementById('fundoMenu').classList.remove('hidden');
+    }
+
+    function fecharMenu() {
+        document.getElementById('menuLateral').style.left = '-300px';
+        document.getElementById('fundoMenu').classList.add('hidden');
+    }
+</script>
 </body>
 
 </html>

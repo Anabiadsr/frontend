@@ -11,6 +11,8 @@
 </head>
 
 <body style="background-color: #f8fafc;">
+
+    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -21,94 +23,181 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
     <main style="max-width: 850px; margin: 40px auto; padding: 0 20px;">
 
         <a href="index.html">
-                <button class="proximaPagina">
-                    &#10095;
-                </button>
-            </a>
+            <button class="proximaPagina">
+                &#10095;
+            </button>
+        </a>
 
         <section class="areaFaq">
 
-            <div style="background: #212952; padding: 18px 30px; border-radius: 10px; margin-bottom: 35px;">
-                <h1 style="color: #ffffff; font-family: 'Poppins', sans-serif; font-size: 38px; font-weight: 800; margin: 0; line-height: 1;">
-                    Faq
-                </h1>
-            </div>
+            <!-- Cabeçalho / Banner -->
+            <header class="mb-8" style="background: transparent !important; width: 100%;">
+                <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
+                    <div>
+                        <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 30px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
+                            Faq
+                        </h1>
+                    </div>
+                </div>
+            </header>
 
             <h2 style="color: #0f172a; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">
                 PERGUNTAS FREQUENTES
             </h2>
-            <div style="position: relative; margin-bottom: 10px;">
-                <input type="text" placeholder="Ex.: o que é SPI?" style="width: 100%; padding: 14px 45px 14px 20px; border: 1.5px solid #cbd5e1; border-radius: 12px; font-size: 13px; font-family: 'Inter', sans-serif; outline: none; background: #ffffff; box-sizing: border-box; color: #334155;">
+
+            <!-- Barra de Perguntas / Formulário Conectado ao Banco -->
+            <form id="formFaq" style="position: relative; margin-bottom: 10px;">
+                <input 
+                    type="text" 
+                    id="campoPergunta" 
+                    placeholder="Digite a sua dúvida e pressione Enter para enviar..." 
+                    required 
+                    autocomplete="off"
+                    style="width: 100%; padding: 14px 105px 14px 20px; border: 1.5px solid #cbd5e1; border-radius: 12px; font-size: 13px; font-family: 'Inter', sans-serif; outline: none; background: #ffffff; box-sizing: border-box; color: #334155;"
+                >
                 
-                <svg style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: #a1a1aa;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                </svg>
-            </div>
+                <button 
+                    type="submit" 
+                    id="btnEnviarFaq"
+                    style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: #171e3d; color: #ffffff; border: none; padding: 8px 18px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;"
+                    onmouseover="this.style.background='#dc2626'" 
+                    onmouseout="this.style.background='#171e3d'"
+                >
+                    Enviar
+                </button>
+            </form>
+
             <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #475569; margin-bottom: 25px; line-height: 1.4;">
-                Encontre respostas rápidas para suas dúvidas. Digite sua pergunta abaixo ou explore nossos tópicos mais populares.
+                Encontre respostas rápidas para suas dúvidas. Digite sua pergunta acima para registrá-la ou explore nossos tópicos abaixo.
             </p>
 
-            <!-- 5. LISTA DE PERGUNTAS (ACORDEÃO) -->
-            <div class="listaFaq">
-
-          
-                <details class="itemFaq">
-                    <summary>
-                        <span>Qual o horário de atendimento da central de atendimento?</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>O atendimento funciona de segunda a sexta-feira, das 8h às 18h.</p>
-                    </div>
-                </details>
-
-              
-                <details class="itemFaq">
-                    <summary>
-                        <span>O que é a SPI - Sênior pass intelligence?</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>A SPI é uma proposta de semáforo inteligente voltada à mobilidade, acessibilidade e segurança no trânsito.</p>
-                    </div>
-                </details>
-
-             
-                <details class="itemFaq">
-                    <summary>
-                        <span>O site e o aplicativo são seguros?</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>Sim. O projeto utiliza boas práticas de segurança para proteger informações e dados dos usuários.</p>
-                    </div>
-                </details>
-
-              
-                <details class="itemFaq">
-                    <summary>
-                        <span>As informações que estão no site são seguras?</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>As informações disponibilizadas são utilizadas exclusivamente dentro das funcionalidades previstas pelo sistema.</p>
-                    </div>
-                </details>
-
-                
-                <details class="itemFaq">
-                    <summary>
-                        <span>Qual o canal para reclamações?</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>Reclamações e sugestões poderão ser encaminhadas pelos canais oficiais de atendimento da SPI.</p>
-                    </div>
-                </details>
-
+            <!-- Lista Dinâmica: Carrega as tags <details> com as classes do faqParceiros.css -->
+            <div class="listaFaq" id="listaFaq">
+                <p style="font-family: 'Inter', sans-serif; font-size: 13px; color: #94a3b8; text-align: center; padding: 20px 0;">
+                    Carregando perguntas...
+                </p>
             </div>
 
         </section>
 
     </main>
+
+    <script>
+    const formFaq = document.getElementById('formFaq');
+    const campoPergunta = document.getElementById('campoPergunta');
+    const listaFaq = document.getElementById('listaFaq');
+    const btnEnviarFaq = document.getElementById('btnEnviarFaq');
+
+    // Variável para guardar todas as perguntas carregadas do banco
+    let listaCompleta = [];
+
+    // 1. Função para desenhar as perguntas na tela
+    function renderizarPerguntas(perguntas) {
+        if (perguntas.length === 0) {
+            listaFaq.innerHTML = `
+                <div style="text-align: center; padding: 25px 10px; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 13px; color: #64748b; margin-bottom: 8px;">
+                        Nenhuma resposta encontrada para essa busca.
+                    </p>
+                    <p style="font-size: 12px; color: #94a3b8;">
+                        Pressione <strong>Enter</strong> ou clique em <strong>Enviar</strong> para cadastrar a sua dúvida!
+                    </p>
+                </div>
+            `;
+            return;
+        }
+
+        listaFaq.innerHTML = perguntas.map(item => {
+            // Se a resposta estiver vazia ou 'null', exibe um aviso amigável
+            const textoResposta = (item.resposta && item.resposta !== 'null') 
+                ? item.resposta 
+                : 'Dúvida recebida! A nossa equipe técnica está analisando e responderá em breve.';
+
+            return `
+                <details class="itemFaq">
+                    <summary>
+                        <span>${item.pergunta}</span>
+                    </summary>
+                    <div class="respostaFaq">
+                        <p>${textoResposta}</p>
+                    </div>
+                </details>
+            `;
+        }).join('');
+    }
+
+    // 2. Busca todas as perguntas no MySQL via listar_faq.php
+    async function carregarFaq() {
+        try {
+            const resposta = await fetch('listar_faq.php');
+            listaCompleta = await resposta.json();
+            renderizarPerguntas(listaCompleta);
+        } catch (erro) {
+            listaFaq.innerHTML = '<p style="font-family: Inter, sans-serif; font-size: 13px; color: #ef4444; text-align: center;">Erro ao carregar perguntas do servidor.</p>';
+        }
+    }
+
+    // 3. FILTRO EM TEMPO REAL: Filtra assim que o usuário digita qualquer letra
+    campoPergunta.addEventListener('input', (e) => {
+        const termo = e.target.value.toLowerCase().trim();
+
+        if (termo === '') {
+            renderizarPerguntas(listaCompleta);
+            return;
+        }
+
+        // Procura tanto no título da pergunta quanto no texto da resposta
+        const filtradas = listaCompleta.filter(item => {
+            const pergunta = item.pergunta ? item.pergunta.toLowerCase() : '';
+            const resposta = item.resposta ? item.resposta.toLowerCase() : '';
+            return pergunta.includes(termo) || resposta.includes(termo);
+        });
+
+        renderizarPerguntas(filtradas);
+    });
+
+    // 4. ENVIO PARA O BANCO: Se clicar em Enviar (ou der Enter), grava no banco
+    formFaq.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const texto = campoPergunta.value.trim();
+        if (!texto) return;
+
+        btnEnviarFaq.innerText = 'Enviando...';
+        btnEnviarFaq.disabled = true;
+
+        const dados = new FormData();
+        dados.append('pergunta', texto);
+
+        try {
+            const resposta = await fetch('salvar_faq.php', {
+                method: 'POST',
+                body: dados
+            });
+
+            const resultado = await resposta.json();
+
+            if (resultado.sucesso) {
+                campoPergunta.value = '';
+                await carregarFaq(); // Atualiza a lista trazendo a nova pergunta no topo
+            } else {
+                alert(resultado.mensagem || 'Não foi possível enviar a pergunta.');
+            }
+        } catch (erro) {
+            alert('Falha na comunicação com o servidor.');
+        } finally {
+            btnEnviarFaq.innerText = 'Enviar';
+            btnEnviarFaq.disabled = false;
+        }
+    });
+
+    // Executa assim que a página abre
+    carregarFaq();
+</script>
 
 </body>
 

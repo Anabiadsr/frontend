@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/noticias.css">
     <title>SPI - Notícias</title>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 antialiased font-sans" style="background-color: #ffffff !important;">
 
+    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -22,74 +23,124 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <main class="paginaNoticiasHome">
+    <main class="max-w-6xl mx-auto px-4 py-6 md:py-10">
 
-        <section class="topoNoticias">
-            <h1>NOTÍCIAS</h1>
-        </section>
+        <!-- Banner Cabeçalho -->
+        <header class="mb-10" style="background: transparent !important; width: 100%;">
+            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <span style="color: #fbbf24; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 4px;">
+                        Informativo & Segurança Viária
+                    </span>
+                    <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 28px; md:font-size: 32px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
+                        NOTÍCIAS
+                    </h1>
+                </div>
 
-        <div class="linhaNoticias"></div>
+                <a href="index.html" 
+                   title="Voltar para a página inicial" 
+                   class="w-10 h-10 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-slate-900 text-white flex items-center justify-center transition shadow-sm">
+                    <span class="text-sm font-bold leading-none">&#10095;</span>
+                </a>
+            </div>
+        </header>
 
-        <section class="gridNoticiasHome">
+        <!-- Grade de Notícias -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 
-            <article class="cardNoticiaHome">
-                <img src="assets/imagens/Noticia07.png" alt="Idosos no tempo dos semáforos">
+            <!-- Card 1: Idosos no Semáforo -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden group">
+                <div class="relative w-full h-52 bg-slate-900 overflow-hidden">
+                    <img 
+                        src="assets/imagens/Noticia07.png" 
+                        alt="Idosos no tempo dos semáforos" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95"
+                    >
+                    <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                        Acessibilidade
+                    </span>
+                </div>
 
-                <div class="conteudoCardHome">
-                    <h2>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-lg font-extrabold text-slate-900 leading-snug mb-3 group-hover:text-blue-700 transition">
                         "98% dos idosos não conseguem atravessar a rua no tempo dos semáforos"
                     </h2>
-
-                    <p>
-                        A pressa do trânsito urbano contrasta com um desafio diário
-                        enfrentado pela terceira idade: o tempo estipulado para a travessia
-                        de pedestres. Um dado preocupante aponta que 98% dos idosos não
-                        conseguem atravessar a rua antes que o sinal fique vermelho,
-                        expondo graves falhas de acessibilidade e acendendo o alerta para
-                        a urgência de adaptar a infraestrutura das cidades ao envelhecimento
-                        da população.
+                    
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-6 line-clamp-4">
+                        A pressa do trânsito urbano contrasta com um desafio diário enfrentado pela terceira idade: o tempo estipulado para a travessia de pedestres. Um dado preocupante aponta que 98% dos idosos não conseguem atravessar a rua antes que o sinal fique vermelho, expondo graves falhas de acessibilidade e acendendo o alerta para a urgência de adaptar a infraestrutura das cidades ao envelhecimento da população.
                     </p>
+
+                    <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-slate-400">Mobilidade Urbana</span>
+                        <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-amber-500 transition">
+                            Ler matéria
+                            <span class="text-sm font-bold">&rarr;</span>
+                        </a>
+                    </div>
                 </div>
             </article>
 
+            <!-- Card 2: Risco à Formação de Condutores -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden group">
+                <div class="relative w-full h-52 bg-slate-900 overflow-hidden">
+                    <img 
+                        src="assets/imagens/Noticia02.png" 
+                        alt="Risco à formação de condutores" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95"
+                    >
+                    <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                        Legislação
+                    </span>
+                </div>
 
-            <article class="cardNoticiaHome">
-                <img src="assets/imagens/Noticia02.png" alt="Risco à formação de condutores">
-
-                <div class="conteudoCardHome">
-                    <h2>
-                        "Risco real à formação de condutores": análise técnica aponta falhas
-                        na minuta da 1020/25
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-lg font-extrabold text-slate-900 leading-snug mb-3 group-hover:text-blue-700 transition">
+                        "Risco real à formação de condutores": análise técnica aponta falhas na minuta da 1020/25
                     </h2>
-
-                    <p>
-                        A proposta de flexibilização no processo de emissão da Carteira
-                        Nacional de Habilitação (CNH) vem gerando forte reação entre
-                        especialistas. Uma análise técnica da minuta da Resolução 1020/25
-                        do Contran apontou falhas graves na formação teórica e prática
-                        dos candidatos, alertando que o afrouxamento das exigências
-                        representa um risco real à segurança viária e à qualidade dos
-                        novos condutores do país.
+                    
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-6 line-clamp-4">
+                        A proposta de flexibilização no processo de emissão da Carteira Nacional de Habilitação (CNH) vem gerando forte reação entre especialistas. Uma análise técnica da minuta da Resolução 1020/25 do Contran apontou falhas graves na formação teórica e prática dos candidatos, alertando que o afrouxamento das exigências representa um risco real à segurança viária e à qualidade dos novos condutores do país.
                     </p>
+
+                    <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-slate-400">Educação no Trânsito</span>
+                        <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-amber-500 transition">
+                            Ler matéria
+                            <span class="text-sm font-bold">&rarr;</span>
+                        </a>
+                    </div>
                 </div>
             </article>
 
+            <!-- Card 3: O que é Semáforo Inteligente -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden group">
+                <div class="relative w-full h-52 bg-slate-900 overflow-hidden">
+                    <img 
+                        src="assets/imagens/Noticia13.png" 
+                        alt="O que é um semáforo inteligente" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95"
+                    >
+                    <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                        Inovação
+                    </span>
+                </div>
 
-            <article class="cardNoticiaHome">
-                <img src="assets/imagens/Noticia13.png" alt="O que é um semáforo inteligente">
-
-                <div class="conteudoCardHome">
-                    <h2>
-                        O que é um semáforo inteligente?
+                <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="text-lg font-extrabold text-slate-900 leading-snug mb-3 group-hover:text-blue-700 transition">
+                        O que é um semáforo inteligente? Descubra como funciona a tecnologia
                     </h2>
-
-                    <p>
-                        Um semáforo inteligente voltado à acessibilidade é um equipamento
-                        de trânsito inovador projetado para adaptar o tempo de travessia
-                        às necessidades reais dos pedestres, permitindo que idosos e
-                        pessoas com deficiência (PcD) estendam o tempo do sinal verde
-                        apenas aproximando um cartão do leitor.
+                    
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed mb-6 line-clamp-4">
+                        Um semáforo inteligente voltado à acessibilidade é um equipamento de trânsito inovador projetado para adaptar o tempo de travessia às necessidades reais dos pedestres, permitindo que idosos e pessoas com deficiência (PcD) estendam o tempo do sinal verde apenas aproximando um cartão do leitor.
                     </p>
+
+                    <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-slate-400">Tecnologia & IA</span>
+                        <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-amber-500 transition">
+                            Ler matéria
+                            <span class="text-sm font-bold">&rarr;</span>
+                        </a>
+                    </div>
                 </div>
             </article>
 

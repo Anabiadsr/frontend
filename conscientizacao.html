@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/layoutNoticias.css">
     <title>SPI - Conscientização</title>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 antialiased font-sans" style="background-color: #ffffff !important;">
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -22,141 +23,199 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <main class="paginaNoticias">
+    <main class="max-w-6xl mx-auto px-4 py-6 md:py-10" style="background-color: #ffffff !important;">
 
-        <section class="cabecalhoNoticias">
-            <h1>CONSCIENTIZAÇÃO</h1>
+        
+        <header class="mb-10" style="background: transparent !important; width: 100%;">
+            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <span style="color: #f87171; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 4px;">
+                        Comportamento & Prevenção
+                    </span>
+                    <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 26px; md:font-size: 32px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
+                        CONSCIENTIZAÇÃO
+                    </h1>
+                </div>
 
-            <a class="vermelho" href="#">
-                Veja +
+                <a href="blog.html" title="Acessar o Blog" class="inline-flex items-center gap-1.5 px-4 py-2 bg-red-500 hover:bg-red-400 text-white text-xs font-bold uppercase tracking-wider rounded-full transition shadow-md hover:scale-105">
+                    <span>Veja +</span>
+                    <span class="text-sm font-black leading-none">&rarr;</span>
+                </a>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia07.png" alt="Notícia sobre idosos no trânsito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            "98% dos idosos não conseguem atravessar a rua no tempo dos semáforos"
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </a>
+
+      
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia08.png" alt="Notícia sobre deficientes visuais" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            "Deficientes visuais reclamam das dificuldades em atravessar ruas"
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia09.png" alt="Notícia sobre acessibilidade" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            "Pessoas com deficiência física criticam falta de acessibilidade em Registro-SP"
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia10.png" alt="Atitudes seguras no trânsito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            5 atitudes que você acha seguras no trânsito, mas não são
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia11.png" alt="Maio Amarelo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            Maio Amarelo 2026 terá como tema: "Enxergar o outro é salvar vidas"
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <a href="artigoConscientizacao.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia12.png" alt="Dia Mundial em Memória às Vítimas do Trânsito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            Conscientização
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-red-600 transition">
+                            Dia Mundial das Vítimas do Trânsito: especialista alerta sobre riscos de regras mais flexíveis.
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-red-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
         </section>
 
-        <section class="gridNoticias">
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia07.png" alt="Notícia sobre idosos no trânsito">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        "98% dos idosos não conseguem atravessar a rua no tempo dos semáforos"
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
+        <div class="flex justify-end pt-4 mb-6">
+            <a href="index.html" title="Próxima página" class="w-11 h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition shadow-sm">
+                <span class="text-sm font-bold leading-none">&#10095;</span>
             </a>
-
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia08.png" alt="Notícia sobre deficientes visuais">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        "Deficientes visuais reclamam das dificuldades em atravessar ruas"
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia09.png" alt="Notícia sobre acessibilidade">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        "Pessoas com deficiência física criticam falta de acessibilidade em Registro-SP"
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia10.png" alt="Atitudes seguras no trânsito">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        5 atitudes que você acha seguras no trânsito, mas não são
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia11.png" alt="Maio Amarelo">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        Maio Amarelo 2026 terá como tema: "Enxergar o outro é salvar vidas"
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-
-            <a href="artigoConscientizacao.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia12.png" alt="Dia Mundial em Memória às Vítimas do Trânsito">
-
-                    <h3>CONSCIENTIZAÇÃO</h3>
-
-                    <h2>
-                        Dia Mundial das Vítimas do Trânsito: especialista alerta sobre riscos de regras mais flexíveis.
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-        </section>
-
-        <a href="categorias.html">
-            <button class="proximaPagina">
-                &#10095;
-            </button>
-        </a>
+        </div>
 
     </main>
 

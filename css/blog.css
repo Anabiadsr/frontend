@@ -1,7 +1,6 @@
-body{
-    background:white;
+body {
+    background-color: #ffffff; /* força o branco puro */
 }
-
 .paginaBlog{
     position:relative;
     width:100%;

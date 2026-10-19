@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/blog.css">
     <title>SPI - Blog</title>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 antialiased font-sans">
 
     <script src="js/artigo.js"></script>
-
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -24,173 +24,381 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <main class="paginaBlog">
+    <main class="paginaBlog max-w-6xl mx-auto px-4 py-8 md:py-12">
+        <header class="mb-8" style="background: transparent !important; width: 100%;">
+            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
+                <div>
+                    <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 30px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
+                        Blog
+                    </h1>
+                </div>
+            </div>
+        </header>
 
-        <section class="cabecalhoBlog">
+        <a href="index.html" class="self-start md:self-end mb-6 inline-block" title="Voltar para a página inicial">
+            <button class="proximaPagina w-11 h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition shadow-sm cursor-pointer">
+                &#10095;
+            </button>
+        </a>
 
-            <h1>Blog</h1>
+        <div class="conteudoBlog grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <article class="ladoEsquerdo lg:col-span-8 flex flex-col gap-6">
+                <div class="tituloArtigoBlog flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                        <h2 class="text-xs uppercase font-bold tracking-widest text-slate-600">Artigo em Destaque</h2>
+                    </div>
 
-            <a href="index.html">
-                <button class="proximaPagina">
-                    &#10095;
-                </button>
-            </a>
-
-        </section>
-        <br>
-
-        <p class="subtituloBlog">
-            Informação, tecnologia e análises sobre o trânsito e a mobilidade urbana.
-        </p>
-
-
-        <section class="conteudoBlog">
-
-            <div class="ladoEsquerdo">
-
-                <div class="tituloArtigoBlog">
-                    <h2>artigo</h2>
-
-                    <button class="ouvirArtigo" id="botaoOuvir" onclick="ouvirArtigo()">
+                    <button class="ouvirArtigo inline-flex items-center gap-2 bg-slate-900 hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-full transition shadow-sm cursor-pointer" id="botaoOuvir" onclick="ouvirArtigo()">
                         ▷ &nbsp; OUVIR
                     </button>
                 </div>
 
-                <h3>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug">
                     Trânsito de Registro-SP pretende evoluir com semáforos inteligentes
                 </h3>
+                
+                <div class="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden bg-slate-900 shadow-sm">
+                    <img 
+                        src="assets/imagens/transito.jpeg" 
+                        alt="Semáforos inteligentes e mobilidade urbana" 
+                        class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500"
+                    >
+                    <div class="absolute bottom-3 left-4 text-xs text-white/95 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-md">
+                        Semáforos inteligentes com IA e adaptação ao fluxo de pedestres
+                    </div>
+                </div>
 
-                <p>
-                    Em 2026, Registro visa investimentos em modernização,
-                    infraestrutura urbana e ações educativas para melhorar
-                    a mobilidade e a segurança da população.
-                </p>
+                <div class="text-slate-700 leading-relaxed text-base md:text-lg space-y-4">
+                    <p class="font-medium text-slate-900 leading-relaxed">
+                        Em 2026, Registro visa investimentos em modernização,
+                        infraestrutura urbana e ações educativas para melhorar
+                        a mobilidade e a segurança da população.
+                    </p>
 
-                <p>
-                    Com um sistema de mobilidade urbana moderno, com canaletas,
-                    vias lentas e vias rápidas, além de hoje que Registro-SP
-                    é visado por ser bastante movimentado, sendo conhecida como
-                    a “Capital do Vale do Ribeira” e um importante polo comercial
-                    e de serviços da região. Em 2026, a cidade se manteve na
-                    vanguarda, com investimentos em modernização, infraestrutura
-                    urbana e ações educativas para melhorar a mobilidade e a
-                    segurança da população nas ruas.
-                </p>
+                    <p>
+                        Com um sistema de mobilidade urbana moderno, com canaletas,
+                        vias lentas e vias rápidas, além de hoje que Registro-SP
+                        é visado por ser bastante movimentado, sendo conhecida como
+                        a “Capital do Vale do Ribeira” e um importante polo comercial
+                        e de serviços da região. Em 2026, a cidade se manteve na
+                        vanguarda, com investimentos em modernização, infraestrutura
+                        urbana e ações educativas para melhorar a mobilidade e a
+                        segurança da população nas ruas.
+                    </p>
+                    <blockquote class="my-6 p-5 border-l-4 border-blue-600 bg-blue-50/70 rounded-r-2xl">
+                        <p class="italic text-slate-800 text-base leading-relaxed mb-2">
+                            “Temos buscado inovar com novas tecnologias e aprimoramento técnico.
+                            Nossas ações refletem o compromisso da cidade em tornar o trânsito mais seguro e eficiente.”
+                        </p>
+                        <cite class="text-xs font-bold text-blue-900 uppercase tracking-wider not-italic block">
+                            — Péricles de Matos, Secretário de Defesa Social e Trânsito
+                        </cite>
+                    </blockquote>
 
-                <section class="comentariosBlog">
-                    <article class="comentario">
-                        <img src="assets/imagens/MembroJoao.jpg" alt="João Victor">
+                    <p>
+                        Registro-SP planeja implementar semáforos inteligentes,
+                        novos binários, modernização dos processos e incentivo
+                        à conscientização do trânsito para reduzir acidentes e dar autonomia a pedestres e condutores.
+                    </p>
+                </div>
 
-                        <div class="caixaComentario">
-                            <h4>João Victor</h4>
+                <hr class="border-slate-200 my-4">
 
-                            <p>
-                                Projeto sensacional! Estudo perto de um centro de
-                                reabilitação e vejo diariamente o sufoco de quem tem
-                                mobilidade reduzida para atravessar a rua a tempo.
-                                Usar IA para "segurar" o sinal é o tipo de tecnologia
-                                que realmente transforma vidas. Parabéns pelo TCC,
-                                tomara que as prefeituras adotem!
-                            </p>
+      
+                <section class="comentariosBlog space-y-5">
+                    <div class="flex items-center justify-between pb-2">
+                        <h4 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                            Comentários
+                            <span id="contadorComentarios" class="text-xs bg-slate-200 text-slate-700 font-semibold px-2.5 py-0.5 rounded-full">0</span>
+                        </h4>
+
+                        <button id="btnToggleForm" class="text-xs font-bold bg-slate-900 hover:bg-blue-700 text-white px-3 py-1.5 rounded-xl transition shadow-sm cursor-pointer">
+                            + Novo Comentário
+                        </button>
+                    </div>
+
+                   
+                    <form id="formComentario" class="hidden bg-slate-50 border border-slate-200 p-5 rounded-2xl flex-col gap-3 shadow-inner">
+                        <input type="hidden" id="artigoId" value="registro-sp">
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Seu Nome</label>
+                            <input type="text" id="autorNome" required placeholder="Ex.: João Silva" class="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-800">
                         </div>
 
-                    </article>
-
-                    <article class="comentario">
-                        <img src="assets/imagens/MembroAnaB.jpg" alt="Ana Beatriz">
-                        <div class="caixaComentario">
-                            <h4>Ana Beatriz</h4>
-
-                            <p>
-                                Esse projeto é urgente! Vejo diariamente idosos e PcDs
-                                passando sufoco para atravessar a rua, expostos a
-                                motoristas impacientes. Ter uma tecnologia que reconhece
-                                quem precisa de mais tempo no sinal verde não é luxo,
-                                é humanidade e respeito. Parabéns pela iniciativa,
-                                tomara que vá para as ruas logo!
-                            </p>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Comentário</label>
+                            <textarea id="autorComentario" rows="3" required placeholder="Escreva a sua opinião sobre a matéria..." class="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-slate-800"></textarea>
                         </div>
-                    </article>
 
-                    <article class="comentario">
-                        <img src="assets/imagens/MembroFabricio.jpg" alt="Fabricio">
-                        <div class="caixaComentario">
-                            <h4>Fabricio</h4>
-
-                            <p>
-                                Excelente artigo! Na Autoescola Sena, sempre focamos na
-                                direção defensiva, e um semáforo inteligente traz muito
-                                mais calma para o aluno iniciante no sinal verde.
-                                Essa tecnologia é o futuro das aulas práticas!
-                            </p>
+                        <div class="flex justify-end gap-2 pt-1">
+                            <button type="button" id="btnCancelarComentario" class="px-4 py-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 cursor-pointer">
+                                Cancelar
+                            </button>
+                            <button type="submit" id="btnSalvarComentario" class="px-5 py-2 text-xs font-bold uppercase tracking-wider bg-slate-900 hover:bg-blue-600 text-white rounded-xl shadow-sm cursor-pointer transition">
+                                Publicar
+                            </button>
                         </div>
-                    </article>
+                    </form>
 
+                    
+                    <div id="listaComentarios" class="space-y-4">
+                        <p class="text-xs text-slate-400 italic">A carregar comentários...</p>
+                    </div>
                 </section>
 
-            </div>
+            </article>
 
-            <div class="ladoDireito">
+   
+            <aside class="ladoDireito lg:col-span-4 space-y-6">
+                <section class="guiaArtigo bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+    <div class="flex items-center gap-2 mb-3 pb-3 border-b border-slate-100">
+        <div class="w-2.5 h-2.5 rounded-full bg-blue-600"></div>
+        <h2 class="text-base font-bold text-slate-900">Guia final do artigo</h2>
+    </div>
 
-                <p class="textoComplementar">
-                    Registro-SP planeja implementar semáforos inteligentes,
-                    novos binários, modernização dos processos e incentivo
-                    à conscientização do trânsito.
-                    <br>
-                    “Temos buscado inovar com novas tecnologias e aprimoramento
-                    técnico. Nossas ações refletem o compromisso da cidade em
-                    tornar o trânsito mais seguro e eficiente”, afirma o secretário
-                    de Defesa Social e Trânsito, Péricles de Matos.
-                </p>
+    <p class="text-xs text-slate-500 mb-5 leading-relaxed">
+        Avalie a proposta e os parâmetros do projeto sobre mobilidade inteligente:
+    </p>
 
-                <section class="guiaArtigo">
+    <form id="formGuiaArtigo" class="space-y-4">
+        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+            <input type="checkbox" id="chkTopicos" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                Os tópicos de comparação do artigo são os que você escolheu?
+            </span>
+        </label>
 
-                    <h2>Guia final do artigo</h2>
+        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+            <input type="checkbox" id="chkDelineamento" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                Os tópicos abordam o tema e o delineamento proposto?
+            </span>
+        </label>
 
-                    <label class="opcaoGuia">
-                        <input type="checkbox">
+        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+            <input type="checkbox" id="chkFluidez" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                O fluxo do texto traz uma boa fluidez?
+            </span>
+        </label>
 
-                        <span>
-                            Os tópicos de comparação do artigo são os que você escolheu?
-                        </span>
-                    </label>
+        <div id="statusGuia" class="hidden text-[11px] text-center p-2 rounded-lg font-bold"></div>
 
+        <button type="submit" id="btnEnviarGuia" class="botaoEnviar w-full mt-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl shadow-md transition duration-200 cursor-pointer">
+            ENVIAR
+        </button>
+    </form>
+</section>
 
-                    <label class="opcaoGuia">
-                        <input type="checkbox">
+                <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-sm">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-blue-400 block mb-2">CFCs & Educação</span>
+                    <h3 class="text-base font-bold mb-2">Conscientização e Prática</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        A integração entre autoescolas e os novos sistemas semafóricos prepara futuros condutores para um trânsito inclusivo e seguro.
+                    </p>
+                    <a href="cfcs.html" class="inline-flex items-center text-xs font-semibold text-blue-300 hover:text-white transition">
+                        Explorar projetos educativos &rarr;
+                    </a>
+                </div>
 
-                        <span>
-                            Os tópicos abordam o tema e o delineamento proposto?
-                        </span>
-                    </label>
+                <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-sm">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-blue-400 block mb-2">Conscientização</span>
+                    <h3 class="text-base font-bold mb-2">saiba mais!</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Campanhas e orientações para promover um convívio mais humano e seguro no trânsito.
+                    </p>
+                    <a href="conscientizacao.html" class="inline-flex items-center text-xs font-semibold text-blue-300 hover:text-white transition">
+                        Explorar projetos educativos &rarr;
+                    </a>
+                </div>
 
-
-                    <label class="opcaoGuia">
-                        <input type="checkbox">
-
-                        <span>
-                            O fluxo do texto traz uma boa fluidez?
-                        </span>
-                    </label>
-
-
-                    <button class="botaoEnviar">
-                        ENVIAR
-                    </button>
-
-                </section>
-
-
-                <button class="botaoComentar">
-                    Comentar
-                </button>
-
-            </div>
-
-        </section>
-
+                <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-sm">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-blue-400 block mb-2">Mobilidade e Tecnologia</span>
+                    <h3 class="text-base font-bold mb-2">Entenda sobre o semáforo inteligente</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Inovações e soluções inteligentes para transformar o trânsito e a acessibilidade urbana.
+                    </p>
+                    <a href="mobilidadeTecnologia.html" class="inline-flex items-center text-xs font-semibold text-blue-300 hover:text-white transition">
+                        Explorar projetos educativos &rarr;
+                    </a>
+                </div>
+            </aside>
+        </div>
     </main>
+<script>
+        const btnToggleForm = document.getElementById('btnToggleForm');
+        const formComentario = document.getElementById('formComentario');
+        const btnCancelar = document.getElementById('btnCancelarComentario');
+        const listaComentarios = document.getElementById('listaComentarios');
+        const contadorComentarios = document.getElementById('contadorComentarios');
+        const autorNome = document.getElementById('autorNome');
+        const autorComentario = document.getElementById('autorComentario');
+        const btnSalvar = document.getElementById('btnSalvarComentario');
+        const artigoIdInput = document.getElementById('artigoId');
+        const artigoId = artigoIdInput ? artigoIdInput.value : 'registro-sp';
 
+        let enviandoComentario = false;
+        if (btnToggleForm && formComentario) {
+            btnToggleForm.addEventListener('click', () => {
+                formComentario.classList.toggle('hidden');
+                formComentario.classList.toggle('flex');
+                if (!formComentario.classList.contains('hidden') && autorNome) {
+                    autorNome.focus();
+                }
+            });
+        }
+
+        if (btnCancelar && formComentario) {
+            btnCancelar.addEventListener('click', () => {
+                formComentario.classList.add('hidden');
+                formComentario.classList.remove('flex');
+            });
+        }
+
+        async function carregarComentarios() {
+            if (!listaComentarios) return;
+
+            try {
+                const resposta = await fetch(`listar_comentarios.php?artigo_id=${encodeURIComponent(artigoId)}`);
+                const dados = await resposta.json();
+
+                if (contadorComentarios) {
+                    contadorComentarios.innerText = dados.length;
+                }
+
+                if (!Array.isArray(dados) || dados.length === 0) {
+                    listaComentarios.innerHTML = '<p class="text-xs text-slate-400 italic">Ainda não existem comentários neste artigo. Seja o primeiro a comentar!</p>';
+                    return;
+                }
+
+                listaComentarios.innerHTML = dados.map(item => `
+                    <article class="comentario bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center shrink-0 text-sm">
+                            ${(item.nome || 'U').charAt(0).toUpperCase()}
+                        </div>
+                        <div class="caixaComentario flex-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-sm font-bold text-slate-900">${item.nome}</h4>
+                                <span class="text-[11px] text-slate-400 font-semibold">${item.data_formatada || ''}</span>
+                            </div>
+                            <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+                                ${item.comentario}
+                            </p>
+                        </div>
+                    </article>
+                `).join('');
+
+            } catch (erro) {
+                listaComentarios.innerHTML = '<p class="text-xs text-red-500">Erro ao carregar os comentários do servidor.</p>';
+            }
+        }
+
+        if (formComentario) {
+            formComentario.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                if (enviandoComentario) return;
+
+                const nomeValor = autorNome ? autorNome.value.trim() : '';
+                const comentarioValor = autorComentario ? autorComentario.value.trim() : '';
+
+                if (!nomeValor || !comentarioValor) {
+                    alert('Por favor, preencha o seu nome e o comentário.');
+                    return;
+                }
+
+                enviandoComentario = true;
+                btnSalvar.innerText = 'Publicando...';
+                btnSalvar.disabled = true;
+
+                const dados = new FormData();
+                dados.append('artigo_id', artigoId);
+                dados.append('nome', nomeValor);
+                dados.append('comentario', comentarioValor);
+
+                try {
+                    const resposta = await fetch('salvar_comentario.php', {
+                        method: 'POST',
+                        body: dados
+                    });
+
+                    const resultado = await resposta.json();
+
+                    if (resultado.sucesso) {
+                        formComentario.reset();
+                        formComentario.classList.add('hidden');
+                        formComentario.classList.remove('flex');
+                        await carregarComentarios();
+                    } else {
+                        alert(resultado.mensagem || 'Não foi possível publicar o comentário.');
+                    }
+                } catch (erro) {
+                    alert('Falha na comunicação com o servidor.');
+                } finally {
+                    btnSalvar.innerText = 'Publicar';
+                    btnSalvar.disabled = false;
+                    enviandoComentario = false;
+                }
+            });
+        }
+        const formGuia = document.getElementById('formGuiaArtigo');
+        const statusGuia = document.getElementById('statusGuia');
+        const btnEnviarGuia = document.getElementById('btnEnviarGuia');
+
+        let enviandoGuia = false;
+
+        if (formGuia) {
+            formGuia.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                if (enviandoGuia) return;
+
+                enviandoGuia = true;
+                btnEnviarGuia.innerText = 'ENVIANDO...';
+                btnEnviarGuia.disabled = true;
+                statusGuia.classList.add('hidden');
+
+                const chkTopicos = document.getElementById('chkTopicos');
+                const chkDelineamento = document.getElementById('chkDelineamento');
+                const chkFluidez = document.getElementById('chkFluidez');
+
+                const dados = new FormData();
+                dados.append('topicos_comparacao', (chkTopicos && chkTopicos.checked) ? '1' : '0');
+                dados.append('delineamento_proposto', (chkDelineamento && chkDelineamento.checked) ? '1' : '0');
+                dados.append('boa_fluidez', (chkFluidez && chkFluidez.checked) ? '1' : '0');
+
+                try {
+                    const resposta = await fetch('salvar_avaliacao.php', {
+                        method: 'POST',
+                        body: dados
+                    });
+
+                    const resultado = await resposta.json();
+
+                    statusGuia.classList.remove('hidden');
+                    if (resultado.sucesso) {
+                        statusGuia.className = 'text-[11px] text-center p-2 rounded-lg font-bold bg-emerald-100 text-emerald-800';
+                        statusGuia.innerText = resultado.mensagem;
+                        formGuia.reset();
+                    } else {
+                        statusGuia.className = 'text-[11px] text-center p-2 rounded-lg font-bold bg-rose-100 text-rose-800';
+                        statusGuia.innerText = resultado.mensagem;
+                    }
+                } catch (erro) {
+                    statusGuia.classList.remove('hidden');
+                    statusGuia.className = 'text-[11px] text-center p-2 rounded-lg font-bold bg-rose-100 text-rose-800';
+                    statusGuia.innerText = 'Falha na ligação com o servidor.';
+                } finally {
+                    btnEnviarGuia.innerText = 'ENVIAR';
+                    btnEnviarGuia.disabled = false;
+                    enviandoGuia = false;
+                }
+            });
+        }
+        carregarComentarios();
+    </script>
 </body>
 
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/layoutNoticias.css">
     <title>SPI - CFCs</title>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 antialiased font-sans" style="background-color: #ffffff !important;">
+
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -22,147 +24,206 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <main class="paginaNoticias">
+    <main class="max-w-6xl mx-auto px-4 py-6 md:py-10" style="background-color: #ffffff !important;">
+        <header class="mb-10" style="background: transparent !important; width: 100%;">
+            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <span style="color: #34d399; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 4px;">
+                        Formação de Condutores & Educação
+                    </span>
+                    <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 26px; md:font-size: 32px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
+                        CFCs
+                    </h1>
+                </div>
 
-        <section class="cabecalhoNoticias">
-            <h1>CFCs</h1>
+                <a href="blog.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-full transition shadow-md hover:scale-105">
+                    <span>Veja +</span>
+                    <span class="text-sm font-black leading-none">&rarr;</span>
+                </a>
+            </div>
+        </header>
 
-            <a class="verde" href="#">
-                Veja +
+        
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+
+           
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia13.png" alt="Formação de condutores" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            “Risco à formação de condutores”: análise técnica aponta falhas na minuta.
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </a>
+
+           
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia14.png" alt="Lições para condutores" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            10 lições essenciais que todo condutor precisa aprender e aplicar na prática no dia a dia.
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia15.png" alt="Futuro das autoescolas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            “O futuro das autoescolas”: mudanças na CNH e desafios do setor.
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+           
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia16.png" alt="CNH do Brasil" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            CNH do Brasil: veja o que permanece obrigatório no credenciamento das autoescolas
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+           
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia17.jpg" alt="Educação para o trânsito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            Especialista alerta para mudanças na formação de condutores e na educação no trânsito.
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        
+            <a href="artigoCfcs.html" class="group block h-full">
+                <article class="h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative w-full h-48 bg-slate-900 overflow-hidden">
+                        <img src="assets/imagens/Noticia18.png" alt="Autoescolas no Brasil" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
+                        <span class="absolute top-3 left-3 bg-[#171e3d] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md border border-white/10">
+                            CFCs
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h2 class="text-base font-extrabold text-slate-900 leading-snug mb-4 group-hover:text-emerald-700 transition">
+                            Jornada pela Educação no Trânsito será marco regulatório das autoescolas no Brasil
+                        </h2>
+
+                        <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compartilhar</span>
+                            <div class="flex items-center gap-1.5 text-slate-600">
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white flex items-center justify-center text-[11px] font-bold transition">f</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white flex items-center justify-center text-[10px] font-bold transition">𝕏</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white flex items-center justify-center text-[11px] transition">◎</span>
+                                <span class="w-6 h-6 rounded-full bg-slate-100 hover:bg-emerald-500 hover:text-white flex items-center justify-center text-[11px] transition">↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
         </section>
 
-        <section class="gridNoticias">
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia13.png" alt="Formação de condutores">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        “Risco à formação de condutores”: análise técnica aponta falhas na minuta.
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
+        
+        <div class="flex justify-end pt-4 mb-6">
+            <a href="index.html" title="Página inicial" class="w-11 h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition shadow-sm">
+                <span class="text-sm font-bold leading-none">&#10095;</span>
             </a>
-
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia14.png" alt="Lições para condutores">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        10 lições essenciais que todo condutor precisa aprender e aplicar na prática no dia a dia.
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia15.png" alt="Futuro das autoescolas">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        “O futuro das autoescolas”: mudanças na CNH e desafios do setor.
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia16.png" alt="CNH do Brasil">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        CNH do Brasil: veja o que permanece obrigatório no credenciamento das autoescolas
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia17.jpg" alt="Educação para o trânsito">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        Especialista alerta para mudanças na formação de condutores e na educação no trânsito.
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-
-            <a href="artigoCfcs.html">
-                <article class="cardNoticia">
-                    <img src="assets/imagens/Noticia18.png" alt="Autoescolas no Brasil">
-
-                    <h3>CFCs</h3>
-
-                    <h2>
-                        Jornada pela Educação no Trânsito será marco regulatório das autoescolas no Brasil
-                    </h2>
-
-                    <div class="redes">
-                        <span>f</span>
-                        <span>𝕏</span>
-                        <span>◎</span>
-                        <span>↗</span>
-                    </div>
-                </article>
-            </a>
-
-        </section>
-
-        <a href="index.html">
-            <button class="proximaPagina">
-                &#10095;
-            </button>
-        </a>
+        </div>
 
     </main>
-
 
 </body>
 

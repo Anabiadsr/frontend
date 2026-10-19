@@ -1,18 +1,22 @@
+
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/artigo.css">
-    <title>SPI - CFCs</title>
+    <title>SPI - Cfcs</title>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 antialiased font-sans" style="background-color: #ffffff !important;">
 
+   
     <script src="js/artigo.js"></script>
 
+  
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -23,74 +27,112 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <main class="paginaArtigo max-w-5xl mx-auto px-4 py-6 md:py-10" style="background-color: #ffffff !important; display: block; width: 100%;">
+        <div class="mb-10 w-full" style="background: transparent !important; display: block;">
+          
+            <div class="flex justify-end mb-4 w-full">
+                <a href="mobilidadeTecnologia.html" title="Voltar" class="w-10 h-10 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition shadow-sm cursor-pointer">
+                    <span class="text-sm font-bold leading-none rotate-180">&#10095;</span>
+                </a>
+            </div>
+            <div class="w-full rounded-2xl shadow-lg flex flex-col items-center justify-center text-center py-6 px-4" style="background: linear-gradient(135deg, #212952 0%, #171e3d 100%) !important;">
+                <span class="text-green-400 text-[11px] font-extrabold tracking-[1.5px] uppercase mb-1" style="background: transparent !important;">
+                    Artigo Completo
+                </span>
+                <h1 class="categoriaConscientizacao text-white text-2xl md:text-3xl font-extrabold m-0 leading-tight" style="background: transparent !important; width: auto !important; padding: 0 !important; border: none !important;">
+                  CFCs
+                </h1>
+            </div>
+            
+        </div>
 
-    <main class="paginaArtigo">
+        
+        <article class="conteudoArtigo bg-white rounded-2xl border border-slate-100 p-6 md:p-10 shadow-sm" style="background-color: #ffffff !important;">
 
-        <section class="categoriaArtigo">
-            <h1 class="categoriaCfcs">CFCs</h1>
-        </section>
-
-        <article class="conteudoArtigo">
-
-            <h2>
-                Como a Tecnologia e a Formação de Condutores Salvam
-                Vidas: O Futuro da Mobilidade Inclusiva
+          
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-8" style="background: transparent !important;">
+                Como a Tecnologia e a Formação de Condutores Salvam Vidas: O Futuro da Mobilidade Inclusiva
             </h2>
 
-            <div class="informacoesArtigo">
-                <span>♙ Por Agência de Notícias</span>
-                <span>▣ Publicado 17/11/2024 às 13h30</span>
+           
+            <div class="informacoesArtigo flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 mb-8 border-y border-slate-200" style="background: transparent !important;">
+                
+              <div class="flex flex-wrap items-center gap-3 text-xs font-semibold">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full shadow-sm" style="background-color: #f1f5f9 !important; color: #334155 !important; border: 1px solid #e2e8f0 !important;">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+        </svg>
+        POR AGÊNCIA DE NOTÍCIAS
+    </span>
 
-                <button class="ouvirArtigo" id="botaoOuvir" onclick="ouvirArtigo()">
-                    ▷ &nbsp; OUVIR
-                </button>
+    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full shadow-sm" style="background-color: #f1f5f9 !important; color: #334155 !important; border: 1px solid #e2e8f0 !important;">
+        <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        PUBLICADO 17/11/2024 ÀS 13H30
+    </span>
+</div>
+
+            
+               <button class="ouvirArtigo inline-flex items-center justify-center gap-1.5 bg-[#171e3d] hover:bg-red-600 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full transition shadow-sm cursor-pointer border-none" id="botaoOuvir" onclick="ouvirArtigo()" style="width: auto !important; min-width: 0 !important; max-width: fit-content !important;">
+                <span class="text-[10px] leading-none">▷</span> OUVIR
+            </button>
             </div>
 
-            <p>
+           
+            <div class="conteudoComImagem flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-6">
+                
+              
+                <div class="textoArtigo md:w-7/12 w-full text-slate-800 text-base md:text-[17px] leading-relaxed" style="text-align: left !important;">
+                    <p style="text-align: left !important; text-justify: none !important; word-spacing: normal !important; margin: 0; line-height: 1.6;">
                 A segurança nas vias urbanas é um dos maiores desafios das cidades modernas.
                 No entanto, estamos entrando em uma nova era onde a combinação entre tecnologia
                 de ponta e uma formação de condutores humanizada está transformando as ruas em
                 espaços mais seguros, especialmente para as parcelas mais vulneráveis da população:
                 idosos e pessoas com deficiência.
-            </p>
+                    </p>
+                </div>
 
-            <p class="paragrafoRecuado">
-                A grande estrela dessa transformação é o <strong>Semáforo Inteligente.</strong>
+               
+                <div class="md:w-5/12 w-full shrink-0">
+                    <img src="assets/imagens/Noticia08.png" alt="Deficiente visual atravessando a rua" class="w-full h-auto rounded-2xl shadow-sm object-cover">
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-5 text-slate-800 text-base md:text-[17px] leading-relaxed" style="text-align: left !important;">
+                
+                <p style="text-align: left !important; text-justify: none !important; word-spacing: normal !important; margin: 0; line-height: 1.6;">
+                      A grande estrela dessa transformação é o <strong>Semáforo Inteligente.</strong>
                 Diferente dos modelos convencionais, que operam apenas com ciclos de tempo fixos,
                 esta tecnologia utiliza sensores para adaptar o trânsito à necessidade humana real.
-            </p>
-
-            <p class="paragrafoRecuado">
                 Porém a tecnologia, por mais avançada que seja, não funciona sozinha. Então é aqui
                 onde entra o papel crucial das autoescolas. A formação de novos motoristas precisa
                 evoluir junto com as cidades inteligentes.
-            </p>
+                </p>
 
-            <div class="conteudoComImagem">
-
-                <div class="textoArtigo">
-                    <p>
-                        Salvar vidas no trânsito é um esforço conjunto. O nosso projeto de Semáforo
+                <p style="text-align: left !important; text-justify: none !important; word-spacing: normal !important; margin: 0; line-height: 1.6;">
+                     Salvar vidas no trânsito é um esforço conjunto. O nosso projeto de Semáforo
                         Inteligente representa o cérebro dessa mudança, enquanto as Autoescolas
                         Parceiras representam o coração. Juntos, tecnologia e educação estão
                         construindo um futuro onde o direito de ir e vir é respeitado para todos,
                         independentemente da idade ou condição física.
-                    </p>
-                </div>
-
-                <img src="assets/imagens/Noticia14.png" alt="Autoescola e formação de condutores">
 
             </div>
+            <div class="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6" style="background: transparent !important;">
+                <a class="comentarios inline-flex items-center gap-2 text-sm font-bold text-red-600 hover:text-slate-900 transition bg-red-50 hover:bg-slate-100 px-6 py-3 rounded-xl" href="blog.html">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    Clique aqui para ver comentários do Blog
+                </a>
 
-            <a class="comentarios" href="#">
-                Clique aqui para ver comentários do Blog
-            </a>
+    
+                <a href="index.html">
+                    <button class="proximoArtigo w-11 h-11 rounded-full border-2 border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:border-slate-900 hover:text-white transition shadow-sm cursor-pointer">
+                        <span class="text-lg font-bold leading-none">&#10095;</span>
+                    </button>
+                </a>
 
-            <a href="index.html">
-                <button class="proximoArtigo">
-                    &#10095;
-                </button>
-            </a>
+            </div>
 
         </article>
 
