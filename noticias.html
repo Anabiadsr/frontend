@@ -7,6 +7,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/global.css">
     <title>SPI - Notícias</title>
+
+    <style>
+        .botaoRetornoHome {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: 2px solid #cbd5e1;
+            background-color: #ffffff;
+            color: #334155;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .botaoRetornoHome:hover {
+            background-color: #0f172a;
+            border-color: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .botaoRetornoHome svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-slate-800 antialiased font-sans" style="background-color: #ffffff !important;">
@@ -27,7 +60,7 @@
 
         <!-- Banner Cabeçalho -->
         <header class="mb-10" style="background: transparent !important; width: 100%;">
-            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: space-between; box-sizing: border-box;">
+            <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
                 <div>
                     <span style="color: #fbbf24; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 4px;">
                         Informativo & Segurança Viária
@@ -36,12 +69,6 @@
                         NOTÍCIAS
                     </h1>
                 </div>
-
-                <a href="index.html" 
-                   title="Voltar para a página inicial" 
-                   class="w-10 h-10 rounded-full border border-white/20 bg-white/10 hover:bg-white hover:text-slate-900 text-white flex items-center justify-center transition shadow-sm">
-                    <span class="text-sm font-bold leading-none">&#10095;</span>
-                </a>
             </div>
         </header>
 
@@ -145,6 +172,15 @@
             </article>
 
         </section>
+
+        <!-- Botão Padronizado de Retorno à Home (Idêntico ao FAQ) -->
+        <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 32px; margin-bottom: 24px;">
+            <a href="index.html" title="Página inicial" class="botaoRetornoHome">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+        </div>
 
     </main>
 

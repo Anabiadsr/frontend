@@ -8,11 +8,46 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/blog.css">
     <title>SPI - Blog</title>
+
+    <style>
+        .botaoRetornoHome {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: 2px solid #cbd5e1;
+            background-color: #ffffff;
+            color: #334155;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .botaoRetornoHome:hover {
+            background-color: #0f172a;
+            border-color: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .botaoRetornoHome svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-slate-800 antialiased font-sans">
 
     <script src="js/artigo.js"></script>
+
+    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -25,6 +60,8 @@
     </script>
 
     <main class="paginaBlog max-w-6xl mx-auto px-4 py-8 md:py-12">
+
+        <!-- Topo / Banner do Blog -->
         <header class="mb-8" style="background: transparent !important; width: 100%;">
             <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
                 <div>
@@ -35,13 +72,8 @@
             </div>
         </header>
 
-        <a href="index.html" class="self-start md:self-end mb-6 inline-block" title="Voltar para a página inicial">
-            <button class="proximaPagina w-11 h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition shadow-sm cursor-pointer">
-                &#10095;
-            </button>
-        </a>
-
         <div class="conteudoBlog grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Artigo Principal e Comentários -->
             <article class="ladoEsquerdo lg:col-span-8 flex flex-col gap-6">
                 <div class="tituloArtigoBlog flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
                     <div class="flex items-center gap-2">
@@ -105,7 +137,7 @@
 
                 <hr class="border-slate-200 my-4">
 
-      
+                <!-- Seção de Comentários -->
                 <section class="comentariosBlog space-y-5">
                     <div class="flex items-center justify-between pb-2">
                         <h4 class="text-xl font-bold text-slate-900 flex items-center gap-2">
@@ -118,7 +150,6 @@
                         </button>
                     </div>
 
-                   
                     <form id="formComentario" class="hidden bg-slate-50 border border-slate-200 p-5 rounded-2xl flex-col gap-3 shadow-inner">
                         <input type="hidden" id="artigoId" value="registro-sp">
                         
@@ -142,7 +173,6 @@
                         </div>
                     </form>
 
-                    
                     <div id="listaComentarios" class="space-y-4">
                         <p class="text-xs text-slate-400 italic">A carregar comentários...</p>
                     </div>
@@ -150,47 +180,47 @@
 
             </article>
 
-   
+            <!-- Barra Lateral com Guias e Destaques -->
             <aside class="ladoDireito lg:col-span-4 space-y-6">
                 <section class="guiaArtigo bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
-    <div class="flex items-center gap-2 mb-3 pb-3 border-b border-slate-100">
-        <div class="w-2.5 h-2.5 rounded-full bg-blue-600"></div>
-        <h2 class="text-base font-bold text-slate-900">Guia final do artigo</h2>
-    </div>
+                    <div class="flex items-center gap-2 mb-3 pb-3 border-b border-slate-100">
+                        <div class="w-2.5 h-2.5 rounded-full bg-blue-600"></div>
+                        <h2 class="text-base font-bold text-slate-900">Guia final do artigo</h2>
+                    </div>
 
-    <p class="text-xs text-slate-500 mb-5 leading-relaxed">
-        Avalie a proposta e os parâmetros do projeto sobre mobilidade inteligente:
-    </p>
+                    <p class="text-xs text-slate-500 mb-5 leading-relaxed">
+                        Avalie a proposta e os parâmetros do projeto sobre mobilidade inteligente:
+                    </p>
 
-    <form id="formGuiaArtigo" class="space-y-4">
-        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" id="chkTopicos" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
-            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
-                Os tópicos de comparação do artigo são os que você escolheu?
-            </span>
-        </label>
+                    <form id="formGuiaArtigo" class="space-y-4">
+                        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="chkTopicos" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+                            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                                Os tópicos de comparação do artigo são os que você escolheu?
+                            </span>
+                        </label>
 
-        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" id="chkDelineamento" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
-            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
-                Os tópicos abordam o tema e o delineamento proposto?
-            </span>
-        </label>
+                        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="chkDelineamento" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+                            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                                Os tópicos abordam o tema e o delineamento proposto?
+                            </span>
+                        </label>
 
-        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
-            <input type="checkbox" id="chkFluidez" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
-            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
-                O fluxo do texto traz uma boa fluidez?
-            </span>
-        </label>
+                        <label class="opcaoGuia flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="chkFluidez" class="mt-1 w-4 h-4 rounded text-blue-600 border-slate-300 focus:ring-blue-500">
+                            <span class="text-xs text-slate-700 group-hover:text-slate-900 leading-snug">
+                                O fluxo do texto traz uma boa fluidez?
+                            </span>
+                        </label>
 
-        <div id="statusGuia" class="hidden text-[11px] text-center p-2 rounded-lg font-bold"></div>
+                        <div id="statusGuia" class="hidden text-[11px] text-center p-2 rounded-lg font-bold"></div>
 
-        <button type="submit" id="btnEnviarGuia" class="botaoEnviar w-full mt-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl shadow-md transition duration-200 cursor-pointer">
-            ENVIAR
-        </button>
-    </form>
-</section>
+                        <button type="submit" id="btnEnviarGuia" class="botaoEnviar w-full mt-4 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl shadow-md transition duration-200 cursor-pointer">
+                            ENVIAR
+                        </button>
+                    </form>
+                </section>
 
                 <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-sm">
                     <span class="text-[10px] uppercase font-bold tracking-widest text-blue-400 block mb-2">CFCs & Educação</span>
@@ -205,7 +235,7 @@
 
                 <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-sm">
                     <span class="text-[10px] uppercase font-bold tracking-widest text-blue-400 block mb-2">Conscientização</span>
-                    <h3 class="text-base font-bold mb-2">saiba mais!</h3>
+                    <h3 class="text-base font-bold mb-2">Saiba mais!</h3>
                     <p class="text-xs text-slate-300 leading-relaxed mb-4">
                         Campanhas e orientações para promover um convívio mais humano e seguro no trânsito.
                     </p>
@@ -226,8 +256,19 @@
                 </div>
             </aside>
         </div>
+
+        <!-- Botão Padronizado de Retorno (Exatamente igual ao do FAQ) -->
+        <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 32px; margin-bottom: 24px;">
+            <a href="index.html" title="Página inicial" class="botaoRetornoHome">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </a>
+        </div>
+
     </main>
-<script>
+
+    <script>
         const btnToggleForm = document.getElementById('btnToggleForm');
         const formComentario = document.getElementById('formComentario');
         const btnCancelar = document.getElementById('btnCancelarComentario');
@@ -343,6 +384,7 @@
                 }
             });
         }
+
         const formGuia = document.getElementById('formGuiaArtigo');
         const statusGuia = document.getElementById('statusGuia');
         const btnEnviarGuia = document.getElementById('btnEnviarGuia');
@@ -397,6 +439,7 @@
                 }
             });
         }
+
         carregarComentarios();
     </script>
 </body>

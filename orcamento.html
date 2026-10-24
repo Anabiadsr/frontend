@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPI - Solicitação de Orçamento & Demonstração</title>
+    
+    <!-- Tailwind CSS com suporte a alternância de classe dark -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <!-- Script anti-flicker: carrega o tema salvo antes de renderizar a tela -->
+    <script>
+        const temaSalvo = localStorage.getItem('spi_theme');
+        if (temaSalvo === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-titulo { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 dark:bg-[#0b1120] dark:text-slate-100 min-h-screen antialiased flex flex-col justify-between transition-colors duration-300">
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-4xl mx-auto px-4 py-8 md:py-12 w-full">
+
+        <!-- Barra Superior de Navegação e Controles -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+            <a href="produto.html" class="inline-flex items-center gap-2 text-xs font-bold text-blue-600 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-300 transition uppercase tracking-wider">
+                &larr; Voltar para Apresentação
+            </a>
+
+            <div class="flex items-center gap-3">
+                <!-- Botão Alternador de Tema (Claro / Escuro) -->
+                <button type="button" id="btnTema" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700/80 transition-all text-xs font-bold cursor-pointer shadow-xs">
+                    <span id="iconeTema">🌙</span>
+                    <span id="textoTema">Modo Escuro</span>
+                </button>
+
+                <!-- Badge Informativo -->
+                <span class="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 tracking-widest bg-slate-200/80 dark:bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-300/80 dark:border-slate-700 hidden sm:inline-block">
+                    Setor Comercial & Projetos
+                </span>
+            </div>
+        </div>
+
+        <!-- Cartão Principal do Formulário -->
+        <div class="bg-white border border-slate-200/90 dark:bg-slate-900/90 dark:border-slate-800 rounded-3xl p-6 md:p-10 shadow-xl dark:shadow-2xl backdrop-blur-md transition-colors duration-300">
+            
+            <div class="mb-8 border-b border-slate-200 dark:border-slate-800 pb-6">
+                <h1 class="font-titulo text-2xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Solicitar Estudo Técnico & Orçamento
+                </h1>
+                <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base mt-2 leading-relaxed">
+                    Preencha as informações para receber a projeção de viabilidade técnica e adaptação da infraestrutura semafórica SPI na sua região.
+                </p>
+            </div>
+
+            <form id="formOrcamento" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Nome do Responsável</label>
+                    <input type="text" id="nome" required placeholder="Ex.: Engenheiro Carlos Silva" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">E-mail Institucional</label>
+                    <input type="email" id="email" required placeholder="carlos.silva@registro.sp.gov.br" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Telefone / WhatsApp</label>
+                    <input type="text" id="telefone" required placeholder="(13) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Cidade / UF</label>
+                    <input type="text" id="cidade" required placeholder="Registro - SP" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Órgão Público ou Empresa</label>
+                    <input type="text" id="entidade" required placeholder="Ex.: Secretaria Municipal de Trânsito" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Tipo de Organização</label>
+                    <select id="tipo_organizacao" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:focus:border-cyan-400 transition text-sm">
+                        <option value="Prefeitura / Secretaria de Trânsito">Prefeitura / Secretaria de Trânsito</option>
+                        <option value="Concessionária de Rodovias">Concessionária de Rodovias</option>
+                        <option value="CFC / Autoescola">CFC / Autoescola</option>
+                        <option value="Engenharia de Tráfego Privada">Engenharia de Tráfego Privada</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Número Estimado de Cruzamentos para Implantação</label>
+                    <input type="number" id="cruzamentos" min="1" max="1000" value="1" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">Detalhes das Vias ou Necessidades do Município</label>
+                    <textarea id="mensagem" rows="3" placeholder="Ex.: Cruzamento da Avenida Principal com grande fluxo de idosos próximo à UBS..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 dark:bg-slate-800/90 dark:border-slate-700 dark:text-white dark:placeholder-slate-500 dark:focus:border-cyan-400 transition text-sm resize-y"></textarea>
+                </div>
+
+                <!-- Feedback Visual -->
+                <div id="statusEnvio" class="md:col-span-2 hidden p-4 rounded-xl text-sm font-semibold text-center"></div>
+
+                <div class="md:col-span-2 flex justify-end pt-2">
+                    <button type="submit" id="btnEnviar" class="w-full md:w-auto px-8 py-3.5 bg-[#171e3d] hover:bg-blue-900 text-white dark:bg-gradient-to-r dark:from-blue-600 dark:to-cyan-500 dark:hover:from-blue-500 dark:hover:to-cyan-400 dark:text-slate-950 font-bold uppercase tracking-wider text-xs rounded-xl shadow-lg transition duration-200 cursor-pointer">
+                        Enviar Solicitação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="py-6 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-900 transition-colors">
+        SPI Pass Intelligence &bull; Sistema Patenteado de Mobilidade Urbana Acessível &bull; 2026
+    </footer>
+
+    <!-- SCRIPT DE ALTERNÂNCIA DE TEMA (CLARO/ESCURO) E ENVIO DO FORMULÁRIO -->
+    <script>
+        // ==========================================
+        // 1. LÓGICA DO TEMA CLARO / ESCURO
+        // ==========================================
+        const btnTema = document.getElementById('btnTema');
+        const iconeTema = document.getElementById('iconeTema');
+        const textoTema = document.getElementById('textoTema');
+        const html = document.documentElement;
+
+        function atualizarBotaoTema() {
+            if (html.classList.contains('dark')) {
+                iconeTema.innerText = '🌙';
+                textoTema.innerText = 'Modo Escuro';
+            } else {
+                iconeTema.innerText = '☀️';
+                textoTema.innerText = 'Modo Claro';
+            }
+        }
+
+        btnTema.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('spi_theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('spi_theme', 'dark');
+            }
+            atualizarBotaoTema();
+        });
+
+        atualizarBotaoTema();
+
+        // ==========================================
+        // 2. ENVIO DO FORMULÁRIO PARA O BANCO
+        // ==========================================
+        const form = document.getElementById('formOrcamento');
+        const btn = document.getElementById('btnEnviar');
+        const status = document.getElementById('statusEnvio');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            btn.innerText = 'Enviando Proposta...';
+            btn.disabled = true;
+            status.classList.add('hidden');
+
+            const dados = new FormData();
+            dados.append('nome', document.getElementById('nome').value.trim());
+            dados.append('email', document.getElementById('email').value.trim());
+            dados.append('telefone', document.getElementById('telefone').value.trim());
+            dados.append('cidade', document.getElementById('cidade').value.trim());
+            dados.append('entidade', document.getElementById('entidade').value.trim());
+            dados.append('tipo_organizacao', document.getElementById('tipo_organizacao').value);
+            dados.append('cruzamentos', document.getElementById('cruzamentos').value);
+            dados.append('mensagem', document.getElementById('mensagem').value.trim());
+
+            try {
+                const res = await fetch('salvar_orcamento.php', {
+                    method: 'POST',
+                    body: dados
+                });
+                const json = await res.json();
+
+                status.classList.remove('hidden');
+                if (json.sucesso) {
+                    status.className = 'md:col-span-2 p-4 rounded-xl text-sm font-semibold text-center bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400';
+                    status.innerText = json.mensagem;
+                    form.reset();
+                } else {
+                    status.className = 'md:col-span-2 p-4 rounded-xl text-sm font-semibold text-center bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400';
+                    status.innerText = json.mensagem;
+                }
+            } catch (err) {
+                status.classList.remove('hidden');
+                status.className = 'md:col-span-2 p-4 rounded-xl text-sm font-semibold text-center bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400';
+                status.innerText = 'Erro ao processar envio com o servidor local.';
+            } finally {
+                btn.innerText = 'Enviar Solicitação';
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

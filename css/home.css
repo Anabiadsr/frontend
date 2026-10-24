@@ -291,3 +291,45 @@
     line-height: 1.4;
     margin-bottom: 4px;
 }
+
+/* FORÇAR MODO ESCURO NO INDEX */
+html.dark body,
+html.dark .bg-spi-light {
+    background-color: #0b1120 !important;
+    color: #f8fafc !important;
+}
+
+html.dark .bg-white,
+html.dark .bg-slate-50,
+html.dark section.bg-white,
+html.dark .cardCategoria,
+html.dark .cardParceiro,
+html.dark aside#menuLateral {
+    background-color: #131b2e !important;
+    border-color: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+html.dark .text-spi-dark,
+html.dark .text-gray-800,
+html.dark .text-slate-900,
+html.dark h1:not(.text-white), 
+html.dark h2:not(.text-white), 
+html.dark h3:not(.text-white) {
+    color: #ffffff !important;
+}
+
+html.dark p,
+html.dark .text-gray-700,
+html.dark .text-gray-600,
+html.dark .text-slate-600 {
+    color: #cbd5e1 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border-color: #334155 !important;
+}

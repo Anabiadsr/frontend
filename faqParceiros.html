@@ -8,6 +8,40 @@
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/faqParceiros.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .botaoRetornoHome {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: 2px solid #cbd5e1;
+            background-color: #ffffff;
+            color: #334155;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .botaoRetornoHome:hover {
+            background-color: #0f172a;
+            border-color: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .botaoRetornoHome svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body style="background-color: #f8fafc;">
@@ -26,15 +60,9 @@
 
     <main style="max-width: 850px; margin: 40px auto; padding: 0 20px;">
 
-        <a href="index.html">
-            <button class="proximaPagina">
-                &#10095;
-            </button>
-        </a>
-
         <section class="areaFaq">
 
-            <!-- Cabeçalho / Banner -->
+            <!-- Cabeçalho / Título -->
             <header class="mb-8" style="background: transparent !important; width: 100%;">
                 <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
                     <div>
@@ -49,7 +77,7 @@
                 PERGUNTAS FREQUENTES
             </h2>
 
-            <!-- Barra de Perguntas / Formulário Conectado ao Banco -->
+            <!-- Formulário de Envio e Busca -->
             <form id="formFaq" style="position: relative; margin-bottom: 10px;">
                 <input 
                     type="text" 
@@ -75,129 +103,131 @@
                 Encontre respostas rápidas para suas dúvidas. Digite sua pergunta acima para registrá-la ou explore nossos tópicos abaixo.
             </p>
 
-            <!-- Lista Dinâmica: Carrega as tags <details> com as classes do faqParceiros.css -->
+            <!-- Lista de Perguntas Dinâmicas -->
             <div class="listaFaq" id="listaFaq">
                 <p style="font-family: 'Inter', sans-serif; font-size: 13px; color: #94a3b8; text-align: center; padding: 20px 0;">
                     Carregando perguntas...
                 </p>
             </div>
 
+            <!-- Botão Padronizado de Retorno à Home -->
+            <div style="display: flex; justify-content: flex-end; width: 100%; margin-top: 32px; margin-bottom: 24px;">
+                <a href="index.html" title="Voltar para a Página Inicial" class="botaoRetornoHome">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </a>
+            </div>
+
         </section>
 
     </main>
 
+    <!-- Scripts de Consulta e Cadastro via MySQL -->
     <script>
-    const formFaq = document.getElementById('formFaq');
-    const campoPergunta = document.getElementById('campoPergunta');
-    const listaFaq = document.getElementById('listaFaq');
-    const btnEnviarFaq = document.getElementById('btnEnviarFaq');
+        const formFaq = document.getElementById('formFaq');
+        const campoPergunta = document.getElementById('campoPergunta');
+        const listaFaq = document.getElementById('listaFaq');
+        const btnEnviarFaq = document.getElementById('btnEnviarFaq');
 
-    // Variável para guardar todas as perguntas carregadas do banco
-    let listaCompleta = [];
+        let listaCompleta = [];
 
-    // 1. Função para desenhar as perguntas na tela
-    function renderizarPerguntas(perguntas) {
-        if (perguntas.length === 0) {
-            listaFaq.innerHTML = `
-                <div style="text-align: center; padding: 25px 10px; font-family: 'Inter', sans-serif;">
-                    <p style="font-size: 13px; color: #64748b; margin-bottom: 8px;">
-                        Nenhuma resposta encontrada para essa busca.
-                    </p>
-                    <p style="font-size: 12px; color: #94a3b8;">
-                        Pressione <strong>Enter</strong> ou clique em <strong>Enviar</strong> para cadastrar a sua dúvida!
-                    </p>
-                </div>
-            `;
-            return;
-        }
-
-        listaFaq.innerHTML = perguntas.map(item => {
-            // Se a resposta estiver vazia ou 'null', exibe um aviso amigável
-            const textoResposta = (item.resposta && item.resposta !== 'null') 
-                ? item.resposta 
-                : 'Dúvida recebida! A nossa equipe técnica está analisando e responderá em breve.';
-
-            return `
-                <details class="itemFaq">
-                    <summary>
-                        <span>${item.pergunta}</span>
-                    </summary>
-                    <div class="respostaFaq">
-                        <p>${textoResposta}</p>
+        function renderizarPerguntas(perguntas) {
+            if (perguntas.length === 0) {
+                listaFaq.innerHTML = `
+                    <div style="text-align: center; padding: 25px 10px; font-family: 'Inter', sans-serif;">
+                        <p style="font-size: 13px; color: #64748b; margin-bottom: 8px;">
+                            Nenhuma resposta encontrada para essa busca.
+                        </p>
+                        <p style="font-size: 12px; color: #94a3b8;">
+                            Pressione <strong>Enter</strong> ou clique em <strong>Enviar</strong> para cadastrar a sua dúvida!
+                        </p>
                     </div>
-                </details>
-            `;
-        }).join('');
-    }
+                `;
+                return;
+            }
 
-    // 2. Busca todas as perguntas no MySQL via listar_faq.php
-    async function carregarFaq() {
-        try {
-            const resposta = await fetch('listar_faq.php');
-            listaCompleta = await resposta.json();
-            renderizarPerguntas(listaCompleta);
-        } catch (erro) {
-            listaFaq.innerHTML = '<p style="font-family: Inter, sans-serif; font-size: 13px; color: #ef4444; text-align: center;">Erro ao carregar perguntas do servidor.</p>';
-        }
-    }
+            listaFaq.innerHTML = perguntas.map(item => {
+                const textoResposta = (item.resposta && item.resposta !== 'null') 
+                    ? item.resposta 
+                    : 'Dúvida recebida! A nossa equipe técnica está analisando e responderá em breve.';
 
-    // 3. FILTRO EM TEMPO REAL: Filtra assim que o usuário digita qualquer letra
-    campoPergunta.addEventListener('input', (e) => {
-        const termo = e.target.value.toLowerCase().trim();
-
-        if (termo === '') {
-            renderizarPerguntas(listaCompleta);
-            return;
+                return `
+                    <details class="itemFaq">
+                        <summary>
+                            <span>${item.pergunta}</span>
+                        </summary>
+                        <div class="respostaFaq">
+                            <p>${textoResposta}</p>
+                        </div>
+                    </details>
+                `;
+            }).join('');
         }
 
-        // Procura tanto no título da pergunta quanto no texto da resposta
-        const filtradas = listaCompleta.filter(item => {
-            const pergunta = item.pergunta ? item.pergunta.toLowerCase() : '';
-            const resposta = item.resposta ? item.resposta.toLowerCase() : '';
-            return pergunta.includes(termo) || resposta.includes(termo);
-        });
+        async function carregarFaq() {
+            try {
+                const resposta = await fetch('listar_faq.php');
+                listaCompleta = await resposta.json();
+                renderizarPerguntas(listaCompleta);
+            } catch (erro) {
+                listaFaq.innerHTML = '<p style="font-family: Inter, sans-serif; font-size: 13px; color: #ef4444; text-align: center;">Erro ao carregar perguntas do servidor.</p>';
+            }
+        }
 
-        renderizarPerguntas(filtradas);
-    });
+        campoPergunta.addEventListener('input', (e) => {
+            const termo = e.target.value.toLowerCase().trim();
 
-    // 4. ENVIO PARA O BANCO: Se clicar em Enviar (ou der Enter), grava no banco
-    formFaq.addEventListener('submit', async (e) => {
-        e.preventDefault();
+            if (termo === '') {
+                renderizarPerguntas(listaCompleta);
+                return;
+            }
 
-        const texto = campoPergunta.value.trim();
-        if (!texto) return;
-
-        btnEnviarFaq.innerText = 'Enviando...';
-        btnEnviarFaq.disabled = true;
-
-        const dados = new FormData();
-        dados.append('pergunta', texto);
-
-        try {
-            const resposta = await fetch('salvar_faq.php', {
-                method: 'POST',
-                body: dados
+            const filtradas = listaCompleta.filter(item => {
+                const pergunta = item.pergunta ? item.pergunta.toLowerCase() : '';
+                const resposta = item.resposta ? item.resposta.toLowerCase() : '';
+                return pergunta.includes(termo) || resposta.includes(termo);
             });
 
-            const resultado = await resposta.json();
+            renderizarPerguntas(filtradas);
+        });
 
-            if (resultado.sucesso) {
-                campoPergunta.value = '';
-                await carregarFaq(); // Atualiza a lista trazendo a nova pergunta no topo
-            } else {
-                alert(resultado.mensagem || 'Não foi possível enviar a pergunta.');
+        formFaq.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const texto = campoPergunta.value.trim();
+            if (!texto) return;
+
+            btnEnviarFaq.innerText = 'Enviando...';
+            btnEnviarFaq.disabled = true;
+
+            const dados = new FormData();
+            dados.append('pergunta', texto);
+
+            try {
+                const resposta = await fetch('salvar_faq.php', {
+                    method: 'POST',
+                    body: dados
+                });
+
+                const resultado = await resposta.json();
+
+                if (resultado.sucesso) {
+                    campoPergunta.value = '';
+                    await carregarFaq();
+                } else {
+                    alert(resultado.mensagem || 'Não foi possível enviar a pergunta.');
+                }
+            } catch (erro) {
+                alert('Falha na comunicação com o servidor.');
+            } finally {
+                btnEnviarFaq.innerText = 'Enviar';
+                btnEnviarFaq.disabled = false;
             }
-        } catch (erro) {
-            alert('Falha na comunicação com o servidor.');
-        } finally {
-            btnEnviarFaq.innerText = 'Enviar';
-            btnEnviarFaq.disabled = false;
-        }
-    });
+        });
 
-    // Executa assim que a página abre
-    carregarFaq();
-</script>
+        carregarFaq();
+    </script>
 
 </body>
 

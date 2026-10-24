@@ -11,10 +11,44 @@
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/produto.css">
+
+    <style>
+        .botaoRetornoHome {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: 2px solid #cbd5e1;
+            background-color: #ffffff;
+            color: #334155;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .botaoRetornoHome:hover {
+            background-color: #0f172a;
+            border-color: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .botaoRetornoHome svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -69,7 +103,7 @@
                     <div class="molduraProduto">
                         <div class="tagLiveStatus">
                             <span class="ledVerde"></span>
-                            Sensores Rfid e audio
+                            Sensores RFID e áudio
                         </div>
                         
                         <img src="assets/imagens/semaforogrande.jpg" alt="Avenida com semáforos inteligentes SPI" class="fotoProduto">
@@ -85,8 +119,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
                 <div class="colunaArgumentos">
@@ -100,6 +132,7 @@
                             Os semáforos tradicionais apenas contam segundos cegos. O <strong>SPI</strong> analisa o fluxo com visão computacional, detecta o pedestre em vulnerabilidade e adapta o ciclo do sinal sem estrangular o tráfego de veículos.
                         </p>
                     </div>
+
                     <div class="gradeVantagens">
                         <div class="cartaoVantagem">
                             <div class="iconeVantagemWrap">
@@ -138,27 +171,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blocoConversao">
-                        <button class="botaoComprar" type="button">
-                            <span>Solicitar Demonstração e Orçamento</span>
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </button>
-                        <p class="garantiaTexto">
-                            🔒 Atendimento direto a órgãos públicos, concessionárias e empresas privadas de infraestrutura.
-                        </p>
-                    </div>
 
-                </div>
+                   <div class="blocoConversao">
+    <a href="orcamento.html" class="botaoComprar" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+        <span>Solicitar Demonstração e Orçamento</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </a>
+    
+    <p class="garantiaTexto" style="margin-bottom: 8px;">
+        🔒 Atendimento direto a órgãos públicos, concessionárias e empresas privadas de infraestrutura.
+    </p>
 
+
+    <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+        <a href="index.html" title="Página inicial" class="botaoRetornoHome">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+    </div>
+</div>
             </div>
         </main>
-        <a href="index.html" class="botaoNavegarHome" title="Voltar ao início">
-            &#10095;
-        </a>
-
     </div>
 
 </body>

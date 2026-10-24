@@ -12,6 +12,7 @@
 
 <body>
 
+    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -25,18 +26,18 @@
 
     <main class="paginaEspecialistas">
 
-    
-             <header class="mb-8" style="background: transparent !important; width: 100%;">
+        <!-- Topo / Banner de Título -->
+        <header class="mb-8" style="background: transparent !important; width: 100%;">
             <div style="width: 100%; background: linear-gradient(135deg, #212952 0%, #171e3d 100%); padding: 22px 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(33, 41, 82, 0.25); display: flex; align-items: center; justify-content: center; text-align: center; box-sizing: border-box;">
                 <div>
                     <h1 style="color: #ffffff !important; font-family: 'Poppins', sans-serif, system-ui; font-size: 30px; font-weight: 800; margin: 0; letter-spacing: -0.5px; line-height: 1.1;">
-                       Videos Informativos
-
+                        Vídeos Informativos
                     </h1>
                 </div>
             </div>
         </header>
 
+        <!-- Player de Vídeo em Destaque -->
         <div class="videoPrincipal">
             <video id="videoPrincipal" controls preload="metadata" class="w-full rounded-2xl shadow-lg bg-slate-900">
                 <source src="assets/videos/final-libras_fisio.mp4" type="video/mp4">
@@ -44,6 +45,7 @@
             </video>
         </div>
 
+        <!-- Grade de Vídeos Secundários -->
         <section class="blocoVideosSecundarios max-w-6xl mx-auto px-4 py-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
@@ -56,7 +58,7 @@
                     <div>
                         <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Acessibilidade e Fisioterapia no Trânsito.</h3>
                         <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Inclusão</span>
-                        <p class="text-xs text-slate-500 font-medium">Convidada SPI- Fioterapeuta Laís Fernanda <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
+                        <p class="text-xs text-slate-500 font-medium">Convidada SPI - Fisioterapeuta Laís Fernanda <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
                     </div>
                 </div>
 
@@ -82,7 +84,7 @@
                     <div>
                         <h3 class="font-poppins font-bold text-slate-800 text-sm leading-tight mb-1">Como o tempo do semáforo pode ser um problema na travessia?</h3>
                         <span class="inline-block bg-emerald-100 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-full mb-1">Inclusão</span>
-                                               <p class="text-xs text-slate-500 font-medium">Especialista SPI- Ana Beatriz e Maria José <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
+                        <p class="text-xs text-slate-500 font-medium">Especialista SPI - Ana Beatriz e Maria José <br><span class="text-[10px] text-slate-400">Com Libras</span></p>
                     </div>
                 </div>
 
@@ -99,7 +101,18 @@
                     </div>
                 </div>
 
-                
+            </div>
+
+            <!-- Botão Padronizado de Retorno à Home -->
+            <div class="flex justify-end pt-8 pb-4">
+                <a href="index.html" 
+                   title="Voltar para a Página Inicial" 
+                   class="w-12 h-12 rounded-full border-2 border-slate-300 bg-white text-slate-700 hover:bg-slate-900 hover:border-slate-900 hover:text-white flex items-center justify-center transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
+                   style="width: 48px; height: 48px; min-width: 48px; min-height: 48px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; display: block;">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
